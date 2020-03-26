@@ -33,6 +33,6 @@ client.on("message", message =>{
     }
     if(message.content === prefix + "me"){
         
-         message.channel.send ( {files: ["./videos/" + "fee" + ".wm"]} )
+         message.channel.send ( {files: ["./videos/" + "fee" + ".mov"]} )
     }
 });
