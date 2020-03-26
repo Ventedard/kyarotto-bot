@@ -6,6 +6,9 @@ client.login(process.env.TOKEN);
 
 client.on("message", message =>{
     if(!message.guild) return
+    
+    client.user.setActivity("❤🐇Kyarotto🐇❤");
+    
     if(message.content === prefix + "carrot"){
         message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 
