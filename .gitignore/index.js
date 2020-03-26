@@ -31,4 +31,8 @@ client.on("message", message =>{
         message.channel.send(`Bienvenue à toi ${message.author}, et enfaite j'ai un truc a te montrer 😋`)
          message.channel.send ( {files: ["./Pictures/" + "Guy" + ".jpg"]} )
     }
+    if(message.content === prefix + "me"){
+        
+         message.channel.send ( {files: ["./videos/" + "fee" + ".wm"]} )
+    }
 });
