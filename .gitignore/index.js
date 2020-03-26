@@ -7,7 +7,7 @@ client.login(process.env.TOKEN);
 client.on("message", message =>{
     if(!message.guild) return
     if(message.content === prefix + "carrot"){
-        message.channel.send(`${message.author} Mmm, les Carottes <3`)
+        message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 
         number = 34;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
@@ -26,5 +26,9 @@ client.on("message", message =>{
         }
         }
         
+    }
+    if(message.content === prefix + "hey"){
+        message.channel.send(`Bienvenue à toi ${message.author}, et enfaite j'ai un truc a te montrer 😋`)
+         message.channel.send ( {files: ["./Pictures/" + "Guy" + ".jpg"]} )
     }
 });
