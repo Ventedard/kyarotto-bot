@@ -31,7 +31,7 @@ client.on("message", message =>{
         
     }
     if(message.content === prefix + "hey"){
-        message.channel.send(`Bonjour à toi ${message.author}, et au fait, j'ai un truc à te montrer 😋`)
+        message.channel.send(`Bonjour à toi ${message.author}, et au fait! j'ai un truc à te montrer 😋`)
          message.channel.send ( {files: ["./Pictures/" + "Guy" + ".jpg"]} )
     }
     if(message.content === prefix + "me"){
