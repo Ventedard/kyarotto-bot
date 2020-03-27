@@ -60,4 +60,8 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
          
     }
+        if(message.content === prefix + "encore"){
+        
+         message.channel.send ( {files: ["./autre/" + "encore" + ".mp4"]} )
+    }
 });
