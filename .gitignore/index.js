@@ -64,4 +64,30 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
          message.channel.send ( {files: ["./autre/" + "encore" + ".mp4"]} )
     }
+    
+        if(message.content === prefix + "meme"){
+        
+
+        number = 11;
+        imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        
+        try {
+            
+            message.channel.send ( {files: ["./meme/" + imageNumber + ".jpg"]} )
+        } catch (error) {}
+            try {
+               
+            message.channel.send ( {files: ["./meme/" + imageNumber + ".png"]} )
+        } catch (error) {}
+            try {
+              
+            message.channel.send ( {files: ["./meme/" + imageNumber + ".gif"]} )
+        } catch (error) {
+            
+        }
+        
+        
+        
+    }
+    
 });
