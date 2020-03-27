@@ -11,20 +11,20 @@ client.on("message", message =>{
     
     if(message.content === prefix + "carrot"){
         
-
+message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         number = 34;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         
         try {
-            message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
+            
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".jpg"]} )
         } catch (error) {}
             try {
-                message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
+               
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".png"]} )
         } catch (error) {}
             try {
-                message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
+              
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".gif"]} )
         } catch (error) {
             
