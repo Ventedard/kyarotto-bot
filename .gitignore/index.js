@@ -7,7 +7,7 @@ client.login(process.env.TOKEN);
 client.on("message", message =>{
     if(!message.guild) return
     
-    client.user.setActivity("❤🐇Kyarotto🐇❤");
+    client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
     
     if(message.content === prefix + "carrot"){
         
