@@ -18,19 +18,19 @@ client.on("message", message =>{
         try {
             message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".jpg"]} )
-        } catch (error) {
+        } catch (error) {}
             try {
                 message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".png"]} )
-        } catch (error) {
+        } catch (error) {}
             try {
                 message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".gif"]} )
         } catch (error) {
-            message.channel.send(`${message.author} désolé impossible de charger l'image 😢`)
+            
         }
-        }
-        }
+        
+        
         
     }
     if(message.content === prefix + "hey"){
@@ -45,19 +45,19 @@ client.on("message", message =>{
         try {
             
             message.channel.send ( {files: ["./videos/" + videoNumber + ".mov"]} )
-        } catch (error) {
+        } catch (error) {}
             try {
                 
             message.channel.send ( {files: ["./videos/" + videoNumber + ".mp4"]} )
-        } catch (error) {
+        } catch (error) {}
             try {
                 
             message.channel.send ( {files: ["./videos/" + videoNumber + ".avi"]} )
         } catch (error) {
-            message.channel.send(`${message.author} désolé impossible de charger la vidéo 😢`)
+           
         }
-        }
-        }
+        
+        
          
     }
 });
