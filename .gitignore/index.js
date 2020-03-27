@@ -10,21 +10,24 @@ client.on("message", message =>{
     client.user.setActivity("❤🐇Kyarotto🐇❤");
     
     if(message.content === prefix + "carrot"){
-        message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
+        
 
         number = 34;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         
         try {
+            message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".jpg"]} )
         } catch (error) {
             try {
+                message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".png"]} )
         } catch (error) {
             try {
+                message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             message.channel.send ( {files: ["./Pictures/" + imageNumber + ".gif"]} )
         } catch (error) {
-            
+            message.channel.send(`${message.author} désolé impossible de charger l'image 😢`)
         }
         }
         }
@@ -36,6 +39,25 @@ client.on("message", message =>{
     }
     if(message.content === prefix + "me"){
         
-         message.channel.send ( {files: ["./videos/" + "fee" + ".mov"]} )
+        number = 6;
+        videoNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
+        
+        try {
+            
+            message.channel.send ( {files: ["./videos/" + videoNumber + ".mov"]} )
+        } catch (error) {
+            try {
+                
+            message.channel.send ( {files: ["./videos/" + videoNumber + ".mp4"]} )
+        } catch (error) {
+            try {
+                
+            message.channel.send ( {files: ["./videos/" + videoNumber + ".avi"]} )
+        } catch (error) {
+            message.channel.send(`${message.author} désolé impossible de charger la vidéo 😢`)
+        }
+        }
+        }
+         
     }
 });
