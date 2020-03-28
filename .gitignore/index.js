@@ -12,7 +12,7 @@ client.on("message", message =>{
     if(message.content === prefix + "carrot"){
         
 message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
-        number = 34;
+        number = 43;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         
         try {
