@@ -102,10 +102,16 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
   }
     if(message.content === prefix + "lastmsg"){
         message.channel.sendMessage("verification des permission")
-    if(message.member.roles.some(r=>["🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
-  message.channel.send(`${message.author}, oui`)
+        message.delete (1000)
+    if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
+        if(vlastmsg === ''){
+            message.channel.send("Désolé mais je n'ai trouvé personne !😥") 
+        } else{
+           message.channel.send("La dèrnière personne à avoir utilise msg est : " + vlastmsg) 
+        }
+  
     } else {
-  message.channel.send(`${message.author}, non`)
+  message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`)
     }
         
     }
