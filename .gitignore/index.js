@@ -101,12 +101,12 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
    
   }
     if(message.content === prefix + "lastmsg"){
-        message.channel.send(`verification des permission`)
+        message.channel.sendMessage("verification des permission")
         if(message.member.hasPermission('Staff'))
         {
-            message.channel.send(`oui`)
+            message.channel.sendMessage("oui")
         } else{
-            message.channel.send(`non`)
+            message.channel.sendMessage("non")
         }
          
     }
