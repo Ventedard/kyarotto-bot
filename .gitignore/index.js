@@ -5,7 +5,7 @@ var prefix = "c!";
 client.login(process.env.TOKEN);
 
 const uneCommande = 'c!msg '
-const vlastmsg = ''
+var vlastmsg = "";
 
 client.on("message", message =>{
     if(!message.guild) return
