@@ -90,12 +90,10 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
     }
     
-        if(message.content === prefix + "rhitwest"){
-        message.channel.send(`-play https://hitwest.ice.infomaniak.ch/hitwest-high.mp3`)
-         
-    }
-            if(message.content === prefix + "rskyrock"){
-        message.channel.send(`-play http://icecast.skyrock.net/s/natio_mp3_128k`)
+        if(message.content === prefix + "msg"){
+            var str = message.content
+        message.channel.sendMessage(str.substring(6))
+        //message.channel.send(`-play https://hitwest.ice.infomaniak.ch/hitwest-high.mp3`)
          
     }
 });
