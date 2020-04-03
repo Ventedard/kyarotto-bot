@@ -92,7 +92,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     
         if(message.content === prefix + "msg"){
             var str = message.content
-        message.channel.sendMessage(str.substring(6))
+        message.channel.send(str.substring(6))
         //message.channel.send(`-play https://hitwest.ice.infomaniak.ch/hitwest-high.mp3`)
          
     }
