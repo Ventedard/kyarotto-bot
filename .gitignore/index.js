@@ -101,7 +101,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
    
   }
     if(message.content === prefix + "lastmsg"){
-        if(member.roles.cache.has('622186441283338240') = true)
+        if(member.hasPermission('Staff'))
         {
             message.channel.send(`oui`)
         } else{
