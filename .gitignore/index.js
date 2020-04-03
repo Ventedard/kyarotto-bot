@@ -102,7 +102,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
   }
     if(message.content === prefix + "lastmsg"){
         message.channel.sendMessage("verification des permission")
-    if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
+    if(message.member.roles.some(r=>["🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
   message.channel.send(`${message.author}, oui`)
     } else {
   message.channel.send(`${message.author}, non`)
