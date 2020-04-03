@@ -111,7 +111,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         }
   
     } else {
-  message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`)
+  message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼` + member.displayName)
     }
         
     }
