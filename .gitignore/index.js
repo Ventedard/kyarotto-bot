@@ -102,12 +102,11 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
   }
     if(message.content === prefix + "lastmsg"){
         message.channel.sendMessage("verification des permission")
-        if(message.member.hasPermission('Staff'))
-        {
-            message.channel.sendMessage("oui")
-        } else{
-            message.channel.sendMessage("non")
-        }
-         
+    if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
+  message.channel.send(`${message.author}, oui`)
+    } else {
+  message.channel.send(`${message.author}, non`)
+    }
+        
     }
 });
