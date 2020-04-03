@@ -5,6 +5,7 @@ var prefix = "c!";
 client.login(process.env.TOKEN);
 
 const uneCommande = 'c!msg '
+const lastmsg = ''
 
 client.on("message", message =>{
     if(!message.guild) return
@@ -99,4 +100,13 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     client.channels.get("622192865144995851").send("Message anonyme : " + str)
    
   }
+    if(message.content === prefix + "lastmsg"){
+        if(member.roles.cache.has('622186441283338240') === true)
+        {
+            message.channel.send(`oui`)
+        } else{
+            message.channel.send(`non`)
+        }
+         
+    }
 });
