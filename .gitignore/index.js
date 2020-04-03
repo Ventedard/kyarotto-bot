@@ -94,7 +94,8 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     
   if (message.content.startsWith(uneCommande)) {
     const str = message.content.substring(uneCommande.length)
-    client.channels("622192865144995851").send("Message anonyme : " + str);
-   message.channel.sendMessage(str)
+    message.channel.sendMessage(str)
+    client.channels("622192865144995851").send("Message anonyme : " + str)
+   
   }
 });
