@@ -4,6 +4,8 @@ var prefix = "c!";
 
 client.login(process.env.TOKEN);
 
+const uneCommande = 'c!msg '
+
 client.on("message", message =>{
     if(!message.guild) return
     
@@ -90,10 +92,8 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
     }
     
-        if(message.content.startsWith === prefix + "msg"){
-            var str = message.content
-        message.channel.send(str.substring(6))
-        //message.channel.send(`-play https://hitwest.ice.infomaniak.ch/hitwest-high.mp3`)
-         
-    }
+  if (message.content.startsWith(uneCommande)) {
+    const str = message.content.substring(uneCommande.length)
+    message.channel.sendMessage(str)
+  }
 });
