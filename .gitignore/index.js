@@ -101,6 +101,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
    
   }
     if(message.content === prefix + "lastmsg"){
+        message.channel.send(`verification des permission`)
         if(message.member.hasPermission('Staff'))
         {
             message.channel.send(`oui`)
