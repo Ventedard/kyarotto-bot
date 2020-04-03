@@ -93,8 +93,9 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     }
     
   if (message.content.startsWith(uneCommande)) {
+      message.delete (1000)
     const str = message.content.substring(uneCommande.length)
-    message.channel.sendMessage(str)
+    //message.channel.sendMessage(str)
     client.channels.get("622192865144995851").send("Message anonyme : " + str)
    
   }
