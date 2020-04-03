@@ -98,7 +98,16 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     const str = message.content.substring(uneCommande.length)
     //message.channel.sendMessage(str)
     client.channels.get("622192865144995851").send("Message anonyme : " + str)
-    vlastmsg = member.displayName;
+      
+      user = message.member;
+    user = user.toString();
+    if (user.includes("!")) {
+    user = user.split("!")[1].split(">")[0];
+    } else {
+    user = user.split("@")[1].split(">")[0];
+    }
+
+    vlastmsg = client.users.get(user).username
   }
     if(message.content === prefix + "lastmsg"){
         message.channel.sendMessage("verification des permission")
