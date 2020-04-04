@@ -128,4 +128,18 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     }
         
     }
+        if(message.content === prefix + "help"){
+        var embed = new Discord.RichEmbed()
+            .setTitle("Aide")
+            .setDescription("Voici la liste des commandes")
+            .addField("c!carrot", "image", true)
+            .addField("c!hey", "image monsieur Guy", true)
+            .addField("c!me", "transition de bâtard", true)
+            .addField("c!encore", "tu sais lire ?", true)
+            .addField("c!meme", "image de meme", true)
+            .addField("c!msg votre message", "evoyer un message anonyme", true)
+            .setColor("0x2E64FE")
+            .setFooter("ok")
+        message.channel.sendEmbed(embed);
+   }
 });
