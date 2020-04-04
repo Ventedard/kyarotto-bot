@@ -7,6 +7,7 @@ var prefix = "c!";
 client.login(process.env.TOKEN);
 
 const uneCommande = 'c!msg '
+const uneCommande2 = 'c!radio '
 var vlastmsg = "";
 var inChannel = false;
 
@@ -163,7 +164,32 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
    }
     
     
-  
+      if (message.content.startsWith(uneCommande2)) {
+      
+      message.delete (1000)
+    var str = message.content.substring(uneCommande2.length)
+    
+         var rstat = radio[str]
+         message.member.voiceChannel.join()
+         
+  }
+   
+    if (message.content === prefix + "leave") {
+                if (inChannel) {
+                    bot.setStatus("idle");
+                    bot.leaveVoiceChannel();
+                    inChannel = false;
+                }
+        }
+    
+           if (message.content === prefix + "stop") {
+                if (inChannel) {
+                    bot.voiceConnection.stopPlaying();
+                    bot.setStatus("idle");
+                }
+			}
+    
+ 
 });
 
 
