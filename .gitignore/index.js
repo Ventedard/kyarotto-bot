@@ -110,19 +110,19 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
         if(vlastmsg === ''){
             message.channel.send("Désolé mais je n'ai trouvé personne !😥").then(msg => {
-    msg.delete(3000)
+    msg.delete(5000)
   })
   .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 
         } else{
            message.channel.send("La dèrnière personne à avoir utilise msg est : " + vlastmsg).then(msg => {
-    msg.delete(3000)
+    msg.delete(5000)
   })
   .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 
         }
   
     } else {
   message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
-    msg.delete(3000)
+    msg.delete(5000)
   })
   .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
     }
