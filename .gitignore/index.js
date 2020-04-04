@@ -135,6 +135,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
     }
         if(message.content === prefix + "help"){
+            message.delete (1000)
         var embed = new Discord.RichEmbed()
             .setTitle("Aide")
             .setDescription("Voici la liste des commandes")
