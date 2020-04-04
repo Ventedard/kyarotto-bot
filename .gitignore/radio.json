@@ -3,13 +3,13 @@
         "name" : "Noise FM",
         "url" : "https://play.sas-media.ru/play"
     },
-    "heartfm": {
-        "name" : "Heart",
+    "funradio": {
+        "name" : "Fun",
         "url" : "http://www.heart.co.uk/peterborough/on-air/player/"
     },
     "kissfm": {
         "name" : "Kiss FM",
-        "url" : "http://radioplayer.kissfmuk.com/live/"
+        "url" : "http://icecast.rtl.fr/fun-nat-44-128"
     },
 	"kisstory": {
         "name" : "Kisstory",
