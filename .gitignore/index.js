@@ -171,11 +171,11 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     
          //var rstat = radio[str]
         
-    if (message.member.voice.channel) {
-      const connection = message.member.voice.channel.join();
-    } else {
-      message.reply('You need to join a voice channel first!');
-    }
+     const channel = message.member.voiceChannel;
+
+    channel.join()
+    .then(connection => console.log('Connected!'))
+    .catch(console.error);
         
          
   }
