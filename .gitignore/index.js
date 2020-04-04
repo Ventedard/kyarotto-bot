@@ -170,12 +170,12 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     var str = message.content.substring(uneCommande2.length)
     
          //var rstat = radio[str]
-        async run(message, args){
-                            message.member.voiceChannel.join()
+        
+                           await message.member.voiceChannel.join()
                     .then(connection =>{
                         message.reply("connecter !")
                     })
-        }
+        
          
   }
    
