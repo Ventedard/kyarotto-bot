@@ -169,7 +169,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
       message.delete (1000)
     var str = message.content.substring(uneCommande2.length)
     
-         //var rstat = radio[str]
+         var rstat = radio[str]
         
      const channel = message.member.voiceChannel;
 
