@@ -2,9 +2,6 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 var prefix = "c!";
 
-const ytdl = require("ytdl-core"); //youtube api
-const queue = new Map(); //musique playlist
-
 client.login(process.env.TOKEN);
 
 const uneCommande = 'c!msg '
