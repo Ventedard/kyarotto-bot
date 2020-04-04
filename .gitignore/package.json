@@ -12,6 +12,7 @@
     "discord.js": "^11.2.1",
     "opusscript": "0.0.7",
     "ytdl-core": "^2.0.1",
+    "ffmpeg-static": "^4.0.1",
         "soundcloudr": "^1.1.0",
     "spotify-web": "git+https://github.com/mattyway/node-spotify-web.git"
   }
