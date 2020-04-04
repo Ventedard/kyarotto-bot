@@ -164,13 +164,16 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
    }
     
     
-      if (message.content.startsWith(uneCommande2)) {
+     async if (message.content.startsWith(uneCommande2)) {
       
       message.delete (1000)
     var str = message.content.substring(uneCommande2.length)
     
          //var rstat = radio[str]
-         message.member.voiceChannel.join()
+                    message.member.voiceChannel.join()
+                    .then(connection =>{
+                        message.reply("connecter !")
+                    })
          
   }
    
