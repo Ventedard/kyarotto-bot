@@ -177,7 +177,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     .then(connection => console.log('Connected!'))
     .catch(console.error);
         inChannel = true;
-	      bot.voiceConnection.playFile(rstat.url);
+	      client.voiceConnection.playFile(rstat.url);
 	       // message.channel.send(rstat.url).then(msg => {
    // msg.delete(5000)
  // })
