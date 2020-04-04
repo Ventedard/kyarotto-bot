@@ -153,7 +153,13 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         message.channel.sendEmbed(embed);
    }
     
-
+   if(message.content === prefix + "test"){
+       message.delete (1000)
+       message.channel.send("OK").then(msg => {
+    msg.delete(5000)
+  })
+  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 
+   }
   
 });
 
