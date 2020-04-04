@@ -5,7 +5,7 @@
     },
     "funradio": {
         "name" : "Fun",
-        "url" : "http://www.heart.co.uk/peterborough/on-air/player/"
+        "url" : "http://icecast.rtl.fr/fun-nat-44-128"
     },
     "kissfm": {
         "name" : "Kiss FM",
