@@ -164,7 +164,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
    }
     
     
-     async if (message.content.startsWith(uneCommande2)) {
+      if (message.content.startsWith(uneCommande2)) {
       
       message.delete (1000)
     var str = message.content.substring(uneCommande2.length)
