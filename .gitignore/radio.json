@@ -1,22 +1,22 @@
 {
-    "noisefm": {
-        "name" : "Noise FM",
-        "url" : "https://play.sas-media.ru/play"
+    "nrj": {
+        "name" : "NRJ",
+        "url" : "https://scdn.nrjaudio.fm/fr/30001/mp3_128.mp3?origine=ecouterradioenligne&cdn_path=audio_lbs10"
     },
-    "funradio": {
-        "name" : "Fun",
+    "fun": {
+        "name" : "Fun Radio",
         "url" : "http://icecast.rtl.fr/fun-nat-44-128"
     },
-    "kissfm": {
-        "name" : "Kiss FM",
-        "url" : "http://icecast.rtl.fr/fun-nat-44-128"
+    "hitwest": {
+        "name" : "Hit West",
+        "url" : "https://hitwest.ice.infomaniak.ch/hitwest-high.mp3"
     },
-	"kisstory": {
-        "name" : "Kisstory",
-        "url" : "http://kisstory.kissfmuk.com/live/"
+	"skyrock": {
+        "name" : "Skyrock",
+        "url" : "http://icecast.skyrock.net/s/natio_mp3_128k"
     },
-	"kissfresh": {
-        "name" : "Kiss Fresh",
-        "url" : "http://kissfresh.kissfmuk.com/live/"
+	"virgin": {
+        "name" : "Virgin Radio",
+        "url" : "https://ais-live.cloud-services.paris:8443/virgin.aac"
     }
 }
