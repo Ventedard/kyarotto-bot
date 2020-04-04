@@ -175,15 +175,13 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 
     channel.join()
     .then(connection => {
-	    const dispatcher = channel.connection.play(rstat.url);
-	    dispatcher.on("end", end => {});
+	    var server = severs[message.guild.id];
+
+server.queue.push(rstat.url);
+	   Play(connection, message)
     })
     .catch(console.error);
         inChannel = true;
-	
-	  
-
-
 	      //client.voiceConnection.playFile(rstat.url);
 	       // message.channel.send(rstat.url).then(msg => {
    // msg.delete(5000)
@@ -191,6 +189,14 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
   //.catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
          
   }
+	function Play(connection, message)
+{
+    var server = servers[message.guild.id];
+    server.dipatcher = connection.playStream(server.queue[0]);
+    server.queue.shift();
+    server.dipatcher.on("end", function(){});
+}
+ 
    
     if (message.content === prefix + "leave") {
                 if (inChannel) {
