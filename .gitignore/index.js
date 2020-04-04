@@ -177,6 +177,11 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     .then(connection => console.log('Connected!'))
     .catch(console.error);
         inChannel = true;
+	      
+	        message.channel.send(rstat.url).then(msg => {
+    msg.delete(5000)
+  })
+  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
          
   }
    
