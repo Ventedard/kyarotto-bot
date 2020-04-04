@@ -173,8 +173,13 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
      const channel = message.member.voiceChannel;
 
+	      if(!client[message.guild.id])
+{
+    client[message.guild.id] = {queue: []}
+}
     channel.join()
     .then(connection => {
+	    
 	    var server = client[message.guild.id];
 
 server.queue.push(rstat.url);
