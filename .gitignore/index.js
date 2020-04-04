@@ -100,7 +100,13 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
       message.delete (100)
     const str = message.content.substring(uneCommande.length)
     //message.channel.sendMessage(str)
-    client.channels.get("622192865144995851").send("Message anonyme : " + str)
+        var embed = new Discord.RichEmbed()
+            .setTitle("Message anonyme")
+            .setDescription(str)
+            .setColor("0xFFBF00")
+            .setFooter("")
+        client.channels.get("622192865144995851").sendEmbed(embed)
+    //client.channels.get("622192865144995851").send("Message anonyme : " + str)
       
 
   }
@@ -139,7 +145,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             .addField("c!meme", "image de meme", true)
             .addField("c!msg votre message", "evoyer un message anonyme", true)
             .setColor("0x2E64FE")
-            .setFooter("ok")
+            .setFooter("")
         message.channel.sendEmbed(embed);
    }
 });
