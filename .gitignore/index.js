@@ -176,7 +176,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     channel.join()
     .then(connection => console.log('Connected!'))
     .catch(console.error);
-        
+        inChannel = true;
          
   }
    
