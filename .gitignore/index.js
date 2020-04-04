@@ -1,11 +1,25 @@
 const Discord = require('discord.js');
+var radio = require("./radio.json");
 const client = new Discord.Client();
 var prefix = "c!";
+
 
 client.login(process.env.TOKEN);
 
 const uneCommande = 'c!msg '
 var vlastmsg = "";
+var inChannel = false;
+
+
+bot.on("ready", function () {
+    console.log("Le bot est près à l'emplois");
+});
+
+bot.on("disconnected", function () {
+    console.log("Le bot es déconnecter");
+    process.exit(1);
+});
+
 
 client.on("message", message =>{
     if(!message.guild) return
@@ -157,6 +171,8 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
   })
   .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 
    }
+    
+    
   
 });
 
