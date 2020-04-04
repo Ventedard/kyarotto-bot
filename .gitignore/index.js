@@ -175,7 +175,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 
     channel.join()
     .then(connection => {
-	    var server = severs[message.guild.id];
+	    var server = client[message.guild.id];
 
 server.queue.push(rstat.url);
 	   Play(connection, message)
@@ -191,7 +191,7 @@ server.queue.push(rstat.url);
   }
 	function Play(connection, message)
 {
-    var server = servers[message.guild.id];
+    var server = client[message.guild.id];
     server.dipatcher = connection.playStream(server.queue[0]);
     server.queue.shift();
     server.dipatcher.on("end", function(){});
