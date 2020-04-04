@@ -175,7 +175,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 
     channel.join()
     .then(connection => {
-	    const dispatcher = connection.play(rstat.url);
+	    const dispatcher = channel.connection.play(rstat.url);
 	    dispatcher.on("end", end => {});
     })
     .catch(console.error);
