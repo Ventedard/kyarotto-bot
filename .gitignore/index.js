@@ -172,7 +172,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
          //var rstat = radio[str]
         
     if (message.member.voice.channel) {
-      const connection = await message.member.voice.channel.join();
+      const connection = message.member.voice.channel.join();
     } else {
       message.reply('You need to join a voice channel first!');
     }
