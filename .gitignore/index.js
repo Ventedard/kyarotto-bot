@@ -10,7 +10,7 @@ const uneCommande = 'c!msg '
 const uneCommande2 = 'c!radio '
 var vlastmsg = "";
 var inChannel = false;
-
+global.servers = {};
 
 client.on("message", message =>{
     if(!message.guild) return
