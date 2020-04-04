@@ -177,7 +177,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     .then(connection => console.log('Connected!'))
     .catch(console.error);
         inChannel = true;
-	const dispatcher = connection.play(rstat.url, {
+	const dispatcher = channel.play(rstat.url, {
 	  volume: 0.5,
 	});
 	      dispatcher.on('finish', () => {
