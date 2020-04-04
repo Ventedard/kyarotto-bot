@@ -174,10 +174,13 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
      const channel = message.member.voiceChannel;
 
     channel.join()
-    .then(connection => console.log('Connected!'))
+    .then(connection => {
+	    const dispatcher = connection.play(rstat.url);
+	    dispatcher.on("end", end => {});
+    })
     .catch(console.error);
         inChannel = true;
-	channel.play(rstat.url);
+	
 	  
 
 
