@@ -232,7 +232,7 @@ server.queue.push(rstat.url);
             .addField("c!radio nrj", "NRJ", false)
             .addField("c!radio hitwest", "Hit West", false)
             .addField("c!radio skyrock", "Skyrock", false)
-            .addField("c!virgin", "Virgin Radio", false)
+            .addField("c!radio virgin", "Virgin Radio", false)
             .setColor("0x2E64FE")
             .setFooter("")
         message.channel.sendEmbed(embed);
