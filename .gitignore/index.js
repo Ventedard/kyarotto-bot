@@ -205,14 +205,14 @@ server.queue.push(rstat.url);
    
     if (message.content === prefix + "leave") {
                 if (inChannel) {
-                    bot.leaveVoiceChannel();
+                    client.leaveVoiceChannel();
                     inChannel = false;
                 }
         }
     
            if (message.content === prefix + "stop") {
                 if (inChannel) {
-                    bot.voiceConnection.stopPlaying();
+                    client.voiceConnection.stopPlaying();
                 }
 			}
     
