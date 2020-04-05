@@ -173,7 +173,10 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
      // message.delete (1000)
     var str = message.content.substring(uneCommande2.length)
     	            try {
+			    
 		var rstat = radio[str]
+		lastname = rstat.name;
+			    
             } catch (e){
 		    		 var embed = new Discord.RichEmbed()
             .setTitle("Erreur")
@@ -181,6 +184,8 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             .setColor("0xCC0000")
             .setFooter("")
         message.channel.sendEmbed(embed);
+		    return;
+		    
 	    }
          
         
@@ -202,7 +207,7 @@ server.queue.push(rstat.url);
     })
     .catch(console.error);
         inChannel = true;
-	      lastname = rstat.name;
+	      
 	      
 	      var embed = new Discord.RichEmbed()
             .setTitle("Lecture de la radio")
