@@ -180,7 +180,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             } catch (e){
 		    		 var embed = new Discord.RichEmbed()
             .setTitle("Erreur")
-            .setDescription("La radio n'a pas été trouvé fait c!radioliste pour obtenir la liste des radios.")
+            .setDescription("La radio n'a pas été trouvé, fait c!radioliste pour obtenir la liste des radios.")
             .setColor("0xCC0000")
             .setFooter("")
         message.channel.sendEmbed(embed);
