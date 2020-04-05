@@ -3,6 +3,7 @@ var radio = require("./radio.json");
 const client = new Discord.Client();
 var prefix = "c!";
 
+var version = "0.0.5b";
 
 client.login(process.env.TOKEN);
 
@@ -12,6 +13,8 @@ var vlastmsg = "";
 var lastname = "";
 var inChannel = false;
 global.servers = {};
+
+
 
 client.on("message", message =>{
     if(!message.guild) return
@@ -161,10 +164,23 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     
    if(message.content === prefix + "test"){
        message.delete (1000)
-       message.channel.send("OK").then(msg => {
+	   if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
+			   var embed = new Discord.RichEmbed()
+            .setTitle("Résumé du test")
+            .setDescription("test : ok >> version : " + version)
+            .setColor("0x33CC33")
+            .setFooter("")
+        message.channel.sendEmbed(embed).then(msg => {
     msg.delete(5000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 
+  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 	   
+	   } else{
+message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
+    msg.delete(5000)
+  })
+  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
+	   }
+	   
    }
     
     
