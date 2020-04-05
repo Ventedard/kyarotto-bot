@@ -191,7 +191,7 @@ server.queue.push(rstat.url);
 	      var embed = new Discord.RichEmbed()
             .setTitle("Lecture de la radio")
             .setDescription(rstat.name)
-            .setColor("0xCD5C5C")
+            .setColor("0x33CC33")
             .setFooter("")
         message.channel.sendEmbed(embed);
 	      //client.voiceConnection.playFile(rstat.url);
@@ -214,14 +214,14 @@ server.queue.push(rstat.url);
                 if (inChannel) {
                     message.guild.me.voiceChannel.leave();
                     inChannel = false;
+			 var embed = new Discord.RichEmbed()
+            .setTitle("Arrêt de la radio")
+            .setDescription(rstat.name + " à été arrêté")
+            .setColor("0xCC0000")
+            .setFooter("")
+        message.channel.sendEmbed(embed);
                 }
-        }
-    
-           if (message.content === prefix + "stop") {
-                if (inChannel) {
-                    client.voiceConnection.stopPlaying();
-                }
-			}
+    }
     
  
 });
