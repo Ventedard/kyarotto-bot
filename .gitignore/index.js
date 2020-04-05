@@ -205,7 +205,7 @@ server.queue.push(rstat.url);
    
     if (message.content === prefix + "leave") {
                 if (inChannel) {
-                    client.leaveVoiceChannel();
+                    client.leaveVoiceChannel(message.member.voiceState.channelID);
                     inChannel = false;
                 }
         }
