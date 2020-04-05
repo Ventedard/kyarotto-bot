@@ -212,7 +212,7 @@ server.queue.push(rstat.url);
 }
  
    
-    if (message.content === prefix + "radio leave") {
+    if (message.content === prefix + "radioleave") {
                 if (inChannel) {
                     message.guild.me.voiceChannel.leave();
                     inChannel = false;
@@ -224,7 +224,7 @@ server.queue.push(rstat.url);
         message.channel.sendEmbed(embed);
                 }
     }
-    if (message.content === prefix + "radio liste") {
+    if (message.content === prefix + "radioliste") {
 	    var embed = new Discord.RichEmbed()
             .setTitle("Radio liste")
             .setDescription("Voici la liste des radio (c!radio nom de la radio)")
