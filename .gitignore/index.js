@@ -9,6 +9,7 @@ client.login(process.env.TOKEN);
 const uneCommande = 'c!msg '
 const uneCommande2 = 'c!radio '
 var vlastmsg = "";
+var lastname = "";
 var inChannel = false;
 global.servers = {};
 
@@ -187,6 +188,7 @@ server.queue.push(rstat.url);
     })
     .catch(console.error);
         inChannel = true;
+	      lastname = rstat.name;
 	      
 	      var embed = new Discord.RichEmbed()
             .setTitle("Lecture de la radio")
@@ -216,7 +218,7 @@ server.queue.push(rstat.url);
                     inChannel = false;
 			 var embed = new Discord.RichEmbed()
             .setTitle("Arrêt de la radio")
-            .setDescription(rstat.name + " à été arrêté")
+            .setDescription(lastname + " à été arrêté")
             .setColor("0xCC0000")
             .setFooter("")
         message.channel.sendEmbed(embed);
