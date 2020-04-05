@@ -205,7 +205,6 @@ server.queue.push(rstat.url);
    
     if (message.content === prefix + "leave") {
                 if (inChannel) {
-                    bot.setStatus("idle");
                     bot.leaveVoiceChannel();
                     inChannel = false;
                 }
@@ -214,7 +213,6 @@ server.queue.push(rstat.url);
            if (message.content === prefix + "stop") {
                 if (inChannel) {
                     bot.voiceConnection.stopPlaying();
-                    bot.setStatus("idle");
                 }
 			}
     
