@@ -187,6 +187,13 @@ server.queue.push(rstat.url);
     })
     .catch(console.error);
         inChannel = true;
+	      
+	      var embed = new Discord.RichEmbed()
+            .setTitle("Lecture de la radio")
+            .setDescription(rstat.name)
+            .setColor("0xCD5C5C")
+            .setFooter("")
+        message.channel.sendEmbed(embed);
 	      //client.voiceConnection.playFile(rstat.url);
 	       // message.channel.send(rstat.url).then(msg => {
    // msg.delete(5000)
