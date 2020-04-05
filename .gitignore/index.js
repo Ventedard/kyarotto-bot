@@ -212,7 +212,7 @@ server.queue.push(rstat.url);
    
     if (message.content === prefix + "leave") {
                 if (inChannel) {
-                    client.leaveVoiceChannel(message.member.voiceState.channelID);
+                    message.guild.me.voiceChannel.leave();
                     inChannel = false;
                 }
         }
