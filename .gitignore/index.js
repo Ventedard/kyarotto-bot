@@ -172,9 +172,20 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
       
      // message.delete (1000)
     var str = message.content.substring(uneCommande2.length)
-    
-         var rstat = radio[str]
+    	            try {
+		var rstat = radio[str]
+            } catch (e){
+		    		 var embed = new Discord.RichEmbed()
+            .setTitle("Erreur")
+            .setDescription("La radio n'a pas été trouvé fais c!radioliste pour obtenire la liste des radios")
+            .setColor("0xCC0000")
+            .setFooter("")
+        message.channel.sendEmbed(embed);
+	    }
+         
         
+	 
+	 
      const channel = message.member.voiceChannel;
 
 	      if(!client[message.guild.id])
