@@ -224,7 +224,7 @@ server.queue.push(rstat.url);
         message.channel.sendEmbed(embed);
                 }
     }
-    if (message.content === prefix + "radio leave") {
+    if (message.content === prefix + "radio liste") {
 	    var embed = new Discord.RichEmbed()
             .setTitle("Radio liste")
             .setDescription("Voici la liste des radio (c!radio nom de la radio)")
