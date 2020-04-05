@@ -212,7 +212,7 @@ server.queue.push(rstat.url);
 }
  
    
-    if (message.content === prefix + "leave") {
+    if (message.content === prefix + "radio leave") {
                 if (inChannel) {
                     message.guild.me.voiceChannel.leave();
                     inChannel = false;
@@ -224,7 +224,19 @@ server.queue.push(rstat.url);
         message.channel.sendEmbed(embed);
                 }
     }
-    
+    if (message.content === prefix + "radio leave") {
+	    var embed = new Discord.RichEmbed()
+            .setTitle("Radio liste")
+            .setDescription("Voici la liste des radio (c!radio nom de la radio)")
+            .addField("c!radio fun", "Fun Radio", false)
+            .addField("c!radio nrj", "NRJ", false)
+            .addField("c!radio hitwest", "Hit West", false)
+            .addField("c!radio skyrock", "Skyrock", false)
+            .addField("c!virgin", "Virgin Radio", false)
+            .setColor("0x2E64FE")
+            .setFooter("")
+        message.channel.sendEmbed(embed);
+    }
  
 });
 
