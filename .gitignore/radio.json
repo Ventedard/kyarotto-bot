@@ -19,4 +19,36 @@
         "name" : "Virgin Radio",
         "url" : "https://ais-live.cloud-services.paris:8443/virgin.aac"
     }
+	"rtl": {
+        "name" : "RTL",
+        "url" : "https://icecast.rtl.fr/rtl-1-44-128?listen=wEbAg4KDwgDCgkFBA4NBAQCCA"
+    }
+	"francebleu": {
+        "name" : "France Bleu",
+        "url" : "https://icecast.radiofrance.fr/fb1071-lofi.mp3"
+    }
+	"europe": {
+        "name" : "Europe 1",
+        "url" : "http://ais-live.cloud-services.paris:8000/europe1.mp3"
+    }
+	"rtl2": {
+        "name" : "RTL 2",
+        "url" : "http://streaming.radio.rtl2.fr/rtl2-1-44-128"
+    }
+	"rmc": {
+        "name" : "RMC Sport",
+        "url" : "http://chai5she.cdn.dvmr.fr/rmcinfo"
+    }
+	"rfm": {
+        "name" : "RFM",
+        "url" : "https://ais-live.cloud-services.paris:8443/rfm.mp3"
+    }
+	"rire&chansons": {
+        "name" : "Rire & Chansons",
+        "url" : "http://cdn.nrjaudio.fm/audio1/fr/30401/mp3_128.mp3?origine=fluxradios"
+    }
+	"nostalgie": {
+        "name" : "Nostalgie",
+        "url" : "http://cdn.nrjaudio.fm/audio1/fr/30601/mp3_128.mp3?origine=fluxradios"
+    }
 }
