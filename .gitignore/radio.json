@@ -53,6 +53,6 @@
     },
 		"astronomia": {
         "name" : "astronomia",
-        "url" : "/Musique/astronomia.mp3"
+        "url" : "./Musique/astronomia.mp3"
     }
 }
