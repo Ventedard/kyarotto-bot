@@ -242,7 +242,7 @@ server.queue.push(rstat.url);
 {
     var server = client[message.guild.id];
     server.dipatcher = connection.playStream(server.queue[0]);
-    server.queue.shift();
+    //server.queue.shift();
     server.dipatcher.on("end", function(){});
 }
  
