@@ -50,5 +50,9 @@
 	"nostalgie": {
         "name" : "Nostalgie",
         "url" : "http://cdn.nrjaudio.fm/audio1/fr/30601/mp3_128.mp3?origine=fluxradios"
+    },
+		"astronomia": {
+        "name" : "astronomia",
+        "url" : "/Musique/astronomia.mp3"
     }
 }
