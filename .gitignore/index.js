@@ -3,7 +3,7 @@ var radio = require("./radio.json");
 const client = new Discord.Client();
 var prefix = "c!";
 
-var version = "0.0.5b";
+var version = "0.0.10";
 
 client.login(process.env.TOKEN);
 
@@ -242,7 +242,7 @@ server.queue.push(rstat.url);
 {
     var server = client[message.guild.id];
     server.dipatcher = connection.playStream(server.queue[0]);
-    //server.queue.shift();
+    server.queue.shift();
     server.dipatcher.on("end", function(){});
 }
  
