@@ -46,8 +46,14 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
     }
     if(message.content === prefix + "hey"){
+	    if(message.member.roles.some(r=>["👾 Zarmah 👾"].includes(r.name)) ) {
         message.channel.send(`Bonjour à toi ${message.author}, et au fait! j'ai un truc à te montrer 😋`)
          message.channel.send ( {files: ["./Pictures/" + "Guy" + ".jpg"]} )
+	    } else{
+		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 👾 Zarmah 👾`).then(msg => {
+    msg.delete(5000)
+  })
+	    }
     }
     if(message.content === prefix + "me"){
         
