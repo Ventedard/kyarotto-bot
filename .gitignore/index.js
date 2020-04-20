@@ -55,6 +55,9 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
   })
 	    }
     }
+	if(message.content === prefix + "oh"){
+		message.channel.send ( {files: ["./videos/OH.mp4"]} )
+	}
     if(message.content === prefix + "me"){
         
         number = 6;
