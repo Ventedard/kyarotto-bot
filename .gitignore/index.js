@@ -89,7 +89,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         if(message.content === prefix + "meme"){
         
 
-        number = 22;
+        number = 28;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         
         try {
