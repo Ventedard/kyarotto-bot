@@ -284,6 +284,7 @@ server.queue.push(rstat.url);
     if (message.content === prefix + "radioleave") {
 try {
                 if (inChannel) {
+			server.dipatcher.end();
                     message.guild.me.voiceChannel.leave();
                     inChannel = false;
 			 var embed = new Discord.RichEmbed()
