@@ -284,6 +284,7 @@ server.queue.push(rstat.url);
     if (message.content === prefix + "radioleave") {
 //try {
                 if (inChannel) {
+			var server = client[message.guild.id];
 			server.dipatcher.end();
                     message.guild.me.voiceChannel.leave();
                     inChannel = false;
