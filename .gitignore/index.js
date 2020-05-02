@@ -292,6 +292,7 @@ server.queue.push(rstat.url);
                     server.dipatcher.end(); 
                     }
                    if(message.guild.connection) message.guild.me.voiceChannel.disconnect();
+			  message.guild.me.voiceChannel.leave();
                     inChannel = false;
 			 var embed = new Discord.RichEmbed()
             .setTitle("🛑 Arrêt de la radio")
