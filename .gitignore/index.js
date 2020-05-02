@@ -176,7 +176,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
     }
         if(message.content === prefix + "help"){
-            message.delete (1000)
+            //message.delete (1000)
         var embed = new Discord.RichEmbed()
             .setTitle("Aide")
             .setDescription("Voici la liste des commandes")
@@ -185,10 +185,12 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             .addField("c!me", "transition de bâtard", true)
             .addField("c!encore", "tu sais lire ?", true)
             .addField("c!meme", "image de meme", true)
+            .addField("c!oh", "Le criste cosmic", true)
             .addField("c!msg votre message", "evoyer un message anonyme", true)
 	    .addField("c!radioliste", "affiche la liste des radios", true)
 	    .addField("c!radioleave", "quiter la radio en cours de lecture", true)
-	    .addField("c!radio votre radio", "permet de lanver votre radio dans un salon vocal", true)
+        .addField("c!radio votre radio", "permet de lanver votre radio dans un salon vocal", true)
+        
             .setColor("0x2E64FE")
             .setFooter("")
         message.channel.sendEmbed(embed);
@@ -228,7 +230,7 @@ message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette
             } catch (e){
 		    		 var embed = new Discord.RichEmbed()
             .setTitle("Erreur")
-            .setDescription("La radio n'a pas été trouvé, fait c!radioliste pour obtenir la liste des radios.")
+            .setDescription("❗ La radio n'a pas été trouvé, fait c!radioliste pour obtenir la liste des radios.")
             .setColor("0xCC0000")
             .setFooter("")
         message.channel.sendEmbed(embed);
@@ -258,7 +260,7 @@ server.queue.push(rstat.url);
 	      
 	      
 	      var embed = new Discord.RichEmbed()
-            .setTitle("Lecture de la radio")
+            .setTitle("▶ Lecture de la radio")
             .setDescription(rstat.name)
             .setColor("0x33CC33")
             .setFooter("")
@@ -285,8 +287,8 @@ try {
                     message.guild.me.voiceChannel.leave();
                     inChannel = false;
 			 var embed = new Discord.RichEmbed()
-            .setTitle("Arrêt de la radio")
-            .setDescription(lastname + " à été arrêté")
+            .setTitle("🛑 Arrêt de la radio")
+            .setDescription(lastname + " à été arrêté ⏹")
             .setColor("0xCC0000")
             .setFooter("")
         message.channel.sendEmbed(embed);
@@ -297,19 +299,19 @@ try {
 	    var embed = new Discord.RichEmbed()
             .setTitle("Radio liste")
             .setDescription("Voici la liste des radio (c!radio nom de la radio)")
-            .addField("c!radio fun", "Fun Radio", false)
-            .addField("c!radio nrj", "NRJ", false)
-            .addField("c!radio hitwest", "Hit West", false)
-            .addField("c!radio skyrock", "Skyrock", false)
-            .addField("c!radio virgin", "Virgin Radio", false)
-	    .addField("c!radio rtl", "RTL", false)
-	    .addField("c!radio francebleu", "France Bleu", false)
-	    .addField("c!radio europe", "Europe 1", false)
-	    .addField("c!radio rtl2", "RTL 2", false)
-	    .addField("c!radio rmc", "RMC Sport", false)
-	    .addField("c!radio rfm", "RFM", false)
-	    .addField("c!radio rire&chansons", "Rire & Chansons", false)
-	    .addField("c!radio nostalgie", "Nostalgie", false)
+            .addField("c!radio fun", "1️⃣Fun Radio", false)
+            .addField("c!radio nrj", "2️⃣NRJ", false)
+            .addField("c!radio hitwest", "3️⃣Hit West", false)
+            .addField("c!radio skyrock", "4️⃣Skyrock", false)
+            .addField("c!radio virgin", "5️⃣Virgin Radio", false)
+	    .addField("c!radio rtl", "8️⃣RTL", false)
+	    .addField("c!radio francebleu", "9️⃣France Bleu", false)
+	    .addField("c!radio europe", "🔟Europe 1", false)
+	    .addField("c!radio rtl2", "1️⃣1️⃣RTL 2", false)
+	    .addField("c!radio rmc", "1️⃣2️⃣RMC Sport", false)
+	    .addField("c!radio rfm", "1️⃣3️⃣RFM", false)
+	    .addField("c!radio rire&chansons", "1️⃣4️⃣Rire & Chansons", false)
+	    .addField("c!radio nostalgie", "1️⃣5️⃣Nostalgie", false)
             .setColor("0x2E64FE")
             .setFooter("")
         message.channel.sendEmbed(embed);
