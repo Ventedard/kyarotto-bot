@@ -3,7 +3,7 @@ var radio = require("./radio.json");
 const client = new Discord.Client();
 var prefix = "c!";
 
-var version = "0.0.10";
+var version = "0.1.0";
 
 client.login(process.env.TOKEN);
 
@@ -22,7 +22,10 @@ client.on("message", message =>{
     client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
     
     if(message.content === prefix + "carrot"){
-        
+        if(inChannel == true){
+		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
+	}else{
+		
 message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         number = 43;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
@@ -44,11 +47,15 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
         
         
-    }
+    }}
     if(message.content === prefix + "hey"){
 	    if(message.member.roles.some(r=>["👾 Zarmah 👾"].includes(r.name)) ) {
+		            if(inChannel == true){
+		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
+	}else{
         message.channel.send(`Bonjour à toi ${message.author}, et au fait! j'ai un truc à te montrer 😋`)
          message.channel.send ( {files: ["./Pictures/" + "Guy" + ".jpg"]} )
+	}
 	    } else{
 		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 👾 Zarmah 👾`).then(msg => {
     msg.delete(5000)
@@ -56,10 +63,15 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 	    }
     }
 	if(message.content === prefix + "oh"){
+		        if(inChannel == true){
+		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
+	}else{
 		message.channel.send ( {files: ["./autre/OH.mp4"]} )
-	}
+	}}
     if(message.content === prefix + "me"){
-        
+                if(inChannel == true){
+		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
+	}else{
         number = 6;
         videoNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         
@@ -80,15 +92,19 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
         
          
-    }
+    }}
         if(message.content === prefix + "encore"){
-        
+                if(inChannel == true){
+		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
+	}else{
          message.channel.send ( {files: ["./autre/" + "encore" + ".mp4"]} )
-    }
+    }}
     
         if(message.content === prefix + "meme"){
         
-
+        if(inChannel == true){
+		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
+	}else{
         number = 28;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         
@@ -109,7 +125,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
         
         
-    }
+    }}
     
   if (message.content.startsWith(uneCommande)) {
 
