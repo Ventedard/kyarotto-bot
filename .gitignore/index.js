@@ -285,11 +285,13 @@ server.queue.push(rstat.url);
 //try {
                 if (inChannel) {
 			var server = client[message.guild.id];
-		    for(var i = server.queue.length -1; i >=0; i--){
+		    if(message.guild.voiceConnection){
+                     for(var i = server.queue.length -1; i >=0; i--){
                         server.queue.splice(i, 1);
                     }
-			server.dipatcher.end();
-                    message.guild.me.voiceChannel.leave();
+                    server.dipatcher.end(); 
+                    }
+                   if(message.guild.connection) message.guild.me.voiceChannel.disconnect();
                     inChannel = false;
 			 var embed = new Discord.RichEmbed()
             .setTitle("🛑 Arrêt de la radio")
