@@ -22,9 +22,10 @@ client.on("message", message =>{
     client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
     
     if(message.content === prefix + "carrot"){
+
         if(inChannel == true){
 		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
-	}else{
+    }else{
 		
 message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         number = 43;
@@ -47,7 +48,8 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
         
         
-    }}
+    }
+    }
     if(message.content === prefix + "hey"){
 	    if(message.member.roles.some(r=>["👾 Zarmah 👾"].includes(r.name)) ) {
 		            if(inChannel == true){
@@ -62,12 +64,14 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
   })
 	    }
     }
+
 	if(message.content === prefix + "oh"){
 		        if(inChannel == true){
 		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
 	}else{
 		message.channel.send ( {files: ["./autre/OH.mp4"]} )
-	}}
+    }
+}
     if(message.content === prefix + "me"){
                 if(inChannel == true){
 		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
@@ -92,13 +96,15 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
         
          
-    }}
+    }
+}
         if(message.content === prefix + "encore"){
                 if(inChannel == true){
 		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
 	}else{
          message.channel.send ( {files: ["./autre/" + "encore" + ".mp4"]} )
-    }}
+    }
+}
     
         if(message.content === prefix + "meme"){
         
@@ -125,7 +131,8 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         
         
         
-    }}
+    }
+}
     
   if (message.content.startsWith(uneCommande)) {
 
