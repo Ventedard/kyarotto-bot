@@ -282,7 +282,7 @@ server.queue.push(rstat.url);
  
    
     if (message.content === prefix + "radioleave") {
-try {
+//try {
                 if (inChannel) {
 			server.dipatcher.end();
                     message.guild.me.voiceChannel.leave();
@@ -294,7 +294,7 @@ try {
             .setFooter("")
         message.channel.sendEmbed(embed);
                 }
-}catch (e){}
+//}catch (e){}
     }
     if (message.content === prefix + "radioliste") {
 	    var embed = new Discord.RichEmbed()
