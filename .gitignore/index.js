@@ -285,6 +285,9 @@ server.queue.push(rstat.url);
 //try {
                 if (inChannel) {
 			var server = client[message.guild.id];
+		    for(var i = server.queue.length -1; i >=0; i--){
+                        server.queue.splice(i, 1);
+                    }
 			server.dipatcher.end();
                     message.guild.me.voiceChannel.leave();
                     inChannel = false;
