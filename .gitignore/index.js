@@ -19,7 +19,7 @@ global.servers = {};
 client.on("message", message =>{
     if(!message.guild) return
     //, { type: 'WATCHING'}
-    client.user.setActivity("❤🐇Kyarotto🐇❤");
+    client.user.setActivity("❤🐇Kyarotto🐇❤(Ventedard is the best dev ✔)");
     
     if(message.content === prefix + "carrot"){
 
