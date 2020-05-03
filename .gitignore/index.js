@@ -20,8 +20,14 @@ client.on("message", message =>{
     if(!message.guild) return
     
         client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
-    client.user.setStatus('En ligne🟢')
-    client.user.setPresence({ game: { name: 'nameGoesHere', type: 0 } });
+        bot.user.setStatus('available')
+    bot.user.setPresence({
+        game: {
+            name: 'with depression',
+            type: "STREAMING",
+            url: "https://www.twitch.tv/monstercat"
+        }
+    });
     
     if(message.content === prefix + "carrot"){
 
