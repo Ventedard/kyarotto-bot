@@ -18,8 +18,8 @@ global.servers = {};
 
 client.on("message", message =>{
     if(!message.guild) return
-    
-    client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
+    //, { type: 'WATCHING'}
+    client.user.setActivity("❤🐇Kyarotto🐇❤");
     
     if(message.content === prefix + "carrot"){
 
