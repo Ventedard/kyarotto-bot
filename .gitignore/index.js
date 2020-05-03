@@ -18,8 +18,16 @@ global.servers = {};
 
 client.on("message", message =>{
     if(!message.guild) return
-    //, { type: 'WATCHING'}
-    client.user.setActivity("❤🐇Kyarotto🐇❤(Ventedard is the best dev ✔)");
+    
+        client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
+    client.user.setStatus('En ligne🟢')
+    client.user.setPresence({
+        game: {
+            name: 'utilise c!help',
+            type: "Ventedard is the best dev",
+            url: "❤🐇Kyarotto🐇❤"
+        }
+    });
     
     if(message.content === prefix + "carrot"){
 
