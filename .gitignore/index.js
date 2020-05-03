@@ -21,13 +21,7 @@ client.on("message", message =>{
     
         client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
     client.user.setStatus('En ligne🟢')
-    client.user.setPresence({
-        game: {
-            name: 'utilise c!help',
-            type: "Ventedard is the best dev",
-            url: "❤🐇Kyarotto🐇❤"
-        }
-    });
+    client.user.setPresence({ game: { name: 'nameGoesHere', type: 0 } });
     
     if(message.content === prefix + "carrot"){
 
