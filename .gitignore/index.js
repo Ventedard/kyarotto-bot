@@ -20,7 +20,7 @@ client.on("message", message =>{
     if(!message.guild) return
     
         client.user.setActivity("❤🐇Kyarotto🐇❤", { type: 'WATCHING'});
-        bot.user.setStatus('dnd')
+        client.user.setStatus('dnd')
 
     
     if(message.content === prefix + "carrot"){
