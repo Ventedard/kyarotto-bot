@@ -19,7 +19,7 @@ global.servers = {};
 client.on("message", message =>{
     if(!message.guild) return
     
-        client.user.setActivity("Ventedard is the best dev ❤", { type: 'WATCHING'});
+        client.user.setActivity("❤Kyarotto de ses mort❤", { type: 'WATCHING'});
         client.user.setStatus('online')
 
     
