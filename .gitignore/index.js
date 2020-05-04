@@ -354,7 +354,7 @@ server.queue.push(rstat.url);
     if(message.content === prefix + "Ticketclose"){
 	    if(message.member.roles.some(r=>["🐼Config Discord🐼"].includes(r.name)) ) {
 
-            
+            delTicketChannel(message)
 
 
 	    } else{
@@ -411,7 +411,12 @@ server.queue.push(rstat.url);
             function delTicketChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
-
+                var category = message.guild.channels.get("706873489402888192");
+                if(message.category.id == category){
+                    message.channel.send("oui !")
+                }else{
+                    message.channel.send("non !")
+                }
             }
 });
 
