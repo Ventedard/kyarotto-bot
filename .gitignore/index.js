@@ -356,7 +356,7 @@ server.queue.push(rstat.url);
                     type: 'text',
 		    parent: category,
                     permissionOverwrites: [{
-                      id: '619940596143882311',
+                      id: '596442306274525206',
                       deny: ['VIEW_CHANNEL'],
                       allow: []
                     },
