@@ -386,7 +386,7 @@ server.queue.push(rstat.url);
                 })
                         .then(chan => {
                 chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
-            idx = chan.channel.id
+            //idx = chan.channel.id
             })
             	.catch(console.error);
                 
@@ -399,7 +399,7 @@ server.queue.push(rstat.url);
             
 
             client.ticketReg [message.author.username] = {
-                TicketID: idx
+                TicketID: "01OK"
             }
             fs.writeFile ("./ticketRegister.json", JSON.stringify (client.ticketReg, null, 4), err => {
                 if(err) throw err;
