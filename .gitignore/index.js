@@ -408,16 +408,16 @@ server.queue.push(rstat.url);
             }
 
 
-            function delTicketChannel(message){
+                        function delTicketChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
+                var thisChannel = message.guild.channel.parent
                 var category = message.guild.channels.get("706873489402888192");
-                if(message.parentID == "706873489402888192"){
+                if(thisChannel == category){
                     message.channel.send("oui !")
                 }else{
                     message.channel.send("non !")
                 }
-		    message.channel.send("effectuer")
             }
 });
 
