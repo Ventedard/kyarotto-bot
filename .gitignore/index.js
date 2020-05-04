@@ -412,7 +412,7 @@ server.queue.push(rstat.url);
                 var server = message.guild;
                 var name = message.author.username;
                 var category = message.guild.channels.get("706873489402888192");
-                if(message.category.id == category){
+                if(message.category.get == category){
                     message.channel.send("oui !")
                 }else{
                     message.channel.send("non !")
