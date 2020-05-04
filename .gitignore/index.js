@@ -349,7 +349,21 @@ server.queue.push(rstat.url);
                 var server = message.guild;
                 var name = message.author.username;
             
-                server.createChannel(name, "text");
+                //server.createChannel(name, "text");
+                server.createChannel(name, {
+                    type: 'text',
+                    permissionOverwrites: [{
+                      id: '619940596143882311',
+                      deny: ['VIEW_CHANNEL'],
+                      allow: []
+                    },
+                    {
+                        id: message.author.id,
+                        allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
+                    },]
+                })
+                .then(message => console.log(`Sent message: ${message.content}`))
+                .catch(console.error);
             }
 });
 
