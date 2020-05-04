@@ -327,6 +327,30 @@ server.queue.push(rstat.url);
         message.channel.sendEmbed(embed);
     }
  
+	
+	
+	
+	    //test ticket ***********************************************************************************************
+
+    if(message.content === prefix + "cdTicket"){
+	    if(message.member.roles.some(r=>["🐼Config Discord🐼"].includes(r.name)) ) {
+
+            makeChannel(message)
+
+
+	    } else{
+		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
+    msg.delete(5000)
+  })
+	    }
+    }
+
+                function makeChannel(message){
+                var server = message.guild;
+                var name = message.author.username;
+            
+                server.createChannel(name, "text");
+            }
 });
 
 
