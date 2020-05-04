@@ -417,6 +417,7 @@ server.queue.push(rstat.url);
                 }else{
                     message.channel.send("non !")
                 }
+		    message.channel.send("effectuer")
             }
 });
 
