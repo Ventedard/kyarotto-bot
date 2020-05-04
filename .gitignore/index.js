@@ -19,7 +19,7 @@ global.servers = {};
 client.on("message", message =>{
     if(!message.guild) return
     
-        client.user.setActivity("❤Kyarotto de ses morts❤", { type: 'WATCHING'});
+        client.user.setActivity("❤☣Kyarotto☢❤", { type: 'WATCHING'});
         client.user.setStatus('online')
 
     
