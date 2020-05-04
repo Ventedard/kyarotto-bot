@@ -408,12 +408,13 @@ server.queue.push(rstat.url);
             }
 
 
-                        function delTicketChannel(message){
+	function delTicketChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
-                var thisChannel = message.guild.channel.parent.id
+                var thisChannel = message.guild.channel
                 var category = message.guild.channels.get("706873489402888192");
-                if(thisChannel == category){
+                let myRole = guild.roles.find(role => role.name === "Moderators");
+                if(myRole == true){
                     message.channel.send("oui !")
                 }else{
                     message.channel.send("non !")
