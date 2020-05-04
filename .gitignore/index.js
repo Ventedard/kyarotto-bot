@@ -411,7 +411,7 @@ server.queue.push(rstat.url);
                         function delTicketChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
-                var thisChannel = message.guild.channel.parent
+                var thisChannel = message.guild.channel.parentID
                 var category = message.guild.channels.get("706873489402888192");
                 if(thisChannel == category){
                     message.channel.send("oui !")
