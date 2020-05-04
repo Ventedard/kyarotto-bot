@@ -411,10 +411,10 @@ server.queue.push(rstat.url);
             function delTicketChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
-                var thisChannel = message.guild.channel
+                var perm = client.guilds.channels.find(ch => ch.name.includes('🔥 Shey 🔥'))
                 var category = message.guild.channels.get("706873489402888192");
                 //let myRole = message.guild.channel.roles.find(role => role.name === "🔥 Shey 🔥");
-                if(server.channel.hasPermission("🔥 Shey 🔥")){
+                if(perm == true){
                     message.channel.send("oui !")
                 }else{
                     message.channel.send("non !")
