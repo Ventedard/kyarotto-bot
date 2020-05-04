@@ -1,6 +1,9 @@
 const Discord = require('discord.js');
 var radio = require("./radio.json");
+
 const client = new Discord.Client();
+
+client.ticketReg = require("./ticketRegister.json");
 var prefix = "c!";
 
 var version = "0.1.0";
@@ -345,11 +348,27 @@ server.queue.push(rstat.url);
 	    }
     }
 
+
+
+
+    if(message.content === prefix + "Ticketclose"){
+	    if(message.member.roles.some(r=>["🐼Config Discord🐼"].includes(r.name)) ) {
+
+            
+
+
+	    } else{
+		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
+    msg.delete(5000)
+  })
+	    }
+    }
+
                 function makeChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
 		var category = message.guild.channels.get("706873489402888192");
-            
+            var idx;
                 //server.createChannel(name, "text");
                 var chan =  server.createChannel(name, {
 		
@@ -365,15 +384,29 @@ server.queue.push(rstat.url);
                         allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
                     },]
                 })
-	    	.then(chan => chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`))
+            .then(chan => 
+                chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
+                )
             	.catch(console.error);
                 
+            idx = chan.get.id
               // var embed = new Discord.RichEmbed()
             //.setTitle("Bonjour")
             //.setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
             //.setColor("0xFFBF00")
             //.setFooter("")
             
+
+            client.ticketReg [message.author.username] = {
+                TicketID: idx
+            }
+            }
+
+
+            function delTicketChannel(message){
+                var server = message.guild;
+                var name = message.author.username;
+
             }
 });
 
