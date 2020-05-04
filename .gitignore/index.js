@@ -398,13 +398,13 @@ server.queue.push(rstat.url);
             //.setFooter("")
             
 
-            client.ticketReg [message.author.username] = {
-                TicketID: "01OK"
+           client.ticketReg [message.author.username] = {
+                TicketID: "test ok..."
             }
-            fs.writeFile ("./ticketRegister.json", JSON.stringify (client.ticketReg, null, 4), err => {
-                if(err) throw err;
+            fs.writeFile ("./ticketRegister.json", JSON.stringify(client.ticketReg));
+                
                 message.channel.send("ok !")
-            });
+            
             }
 
 
