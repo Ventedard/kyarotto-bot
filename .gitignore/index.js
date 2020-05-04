@@ -350,7 +350,7 @@ server.queue.push(rstat.url);
                 var name = message.author.username;
             
                 //server.createChannel(name, "text");
-                server.createChannel(name, {
+                var chan =  server.createChannel(name, {
                     type: 'text',
                     permissionOverwrites: [{
                       id: '619940596143882311',
@@ -362,8 +362,13 @@ server.queue.push(rstat.url);
                         allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
                     },]
                 })
-                .then(message => console.log(`Sent message: ${message.content}`))
-                .catch(console.error);
+                
+                var embed = new Discord.RichEmbed()
+            .setTitle("Bonjour")
+            .setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
+            .setColor("0xFFBF00")
+            .setFooter("")
+            chan.sendEmbed(embed)
             }
 });
 
