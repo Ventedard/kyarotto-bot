@@ -387,7 +387,7 @@ server.queue.push(rstat.url);
             .then(chan => chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`))
             	.catch(console.error);
                 
-            idx = chan.get.id
+            idx = chan.channel.id
               // var embed = new Discord.RichEmbed()
             //.setTitle("Bonjour")
             //.setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
