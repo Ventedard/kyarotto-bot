@@ -362,13 +362,15 @@ server.queue.push(rstat.url);
                         allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
                     },]
                 })
+	    	.then(chan => chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`))
+            	.catch(console.error);
                 
               // var embed = new Discord.RichEmbed()
             //.setTitle("Bonjour")
             //.setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
             //.setColor("0xFFBF00")
             //.setFooter("")
-            chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
+            
             }
 });
 
