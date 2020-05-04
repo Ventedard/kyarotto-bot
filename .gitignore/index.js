@@ -413,8 +413,8 @@ server.queue.push(rstat.url);
                 var name = message.author.username;
                 var thisChannel = message.guild.channel
                 var category = message.guild.channels.get("706873489402888192");
-                let myRole = message.guild.channel.roles.find(role => role.name === "🔥 Shey 🔥");
-                if(myRole == true){
+                //let myRole = message.guild.channel.roles.find(role => role.name === "🔥 Shey 🔥");
+                if(message.guild.roles.find(role => role.name === "🔥 Shey 🔥")){
                     message.channel.send("oui !")
                 }else{
                     message.channel.send("non !")
