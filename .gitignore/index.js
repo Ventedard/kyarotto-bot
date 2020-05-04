@@ -384,10 +384,13 @@ server.queue.push(rstat.url);
                         allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
                     },]
                 })
-            .then(chan => chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`))
+                        .then(chan => {
+                chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
+            idx = chan.channel.id
+            })
             	.catch(console.error);
                 
-            idx = chan.channel.id
+            
               // var embed = new Discord.RichEmbed()
             //.setTitle("Bonjour")
             //.setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
