@@ -348,10 +348,13 @@ server.queue.push(rstat.url);
                 function makeChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
+		var category = message.guild.channels.get("706873489402888192");
             
                 //server.createChannel(name, "text");
                 var chan =  server.createChannel(name, {
+		
                     type: 'text',
+		    parent: category,
                     permissionOverwrites: [{
                       id: '619940596143882311',
                       deny: ['VIEW_CHANNEL'],
