@@ -408,12 +408,12 @@ server.queue.push(rstat.url);
             }
 
 
-	function delTicketChannel(message){
+            function delTicketChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
                 var thisChannel = message.guild.channel
                 var category = message.guild.channels.get("706873489402888192");
-                let myRole = guild.roles.find(role => role.name === "Moderators");
+                let myRole = message.guild.channel.roles.find(role => role.name === "🔥 Shey 🔥");
                 if(myRole == true){
                     message.channel.send("oui !")
                 }else{
