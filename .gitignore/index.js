@@ -336,13 +336,13 @@ server.queue.push(rstat.url);
 	    //test ticket ***********************************************************************************************
 
     if(message.content === prefix + "cdTicket"){
-	    if(message.member.roles.some(r=>["🐼Config Discord🐼"].includes(r.name)) ) {
+	    if(message.member.roles.some(r=>["🔥 Shey 🔥"].includes(r.name)) ) {
 
             makeChannel(message)
 
 
 	    } else{
-		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
+		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🔥 Shey 🔥`).then(msg => {
     msg.delete(5000)
   })
 	    }
@@ -352,13 +352,13 @@ server.queue.push(rstat.url);
 
 
     if(message.content === prefix + "Ticketclose"){
-	    if(message.member.roles.some(r=>["🐼Config Discord🐼"].includes(r.name)) ) {
+	    if(message.member.roles.some(r=>["🔥 Shey 🔥"].includes(r.name)) ) {
 
             delTicketChannel(message)
 
 
 	    } else{
-		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
+		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🔥 Shey 🔥`).then(msg => {
     msg.delete(5000)
   })
 	    }
