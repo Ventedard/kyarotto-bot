@@ -507,9 +507,9 @@ server.queue.push(rstat.url);
             checker = false;
            for (var i = 0; i < array1.length; i++) {
                 if(array1[i] == msg.author){
-                    checker = true;
-                }else{
                     
+                }else{
+                    checker = true;
                 }
            }
            if(checker == false){
