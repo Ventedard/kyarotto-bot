@@ -355,6 +355,13 @@ server.queue.push(rstat.url);
             }else{}
             
     }
+	    if(message.content === prefix + "sav"){
+	    
+
+        scriptSav(message)
+
+}
+	
                 function makeChannel(message){
                 var server = message.guild;
                 var name = "『📩』ticket-" + message.author.username;
@@ -403,6 +410,16 @@ server.queue.push(rstat.url);
                 
         message.channel.send(`Suppression activer !!!`)
         message.channel.delete();
+            }
+	
+	function delTicketChannel(scriptSav){
+
+                let messageCollection = new Discord.Collection();
+                let channelMessages = await message.channel.fetchMessages({
+                    limit: 100
+                }).catch(err => console.log(err));
+
+
             }
 });
 
