@@ -352,17 +352,17 @@ server.queue.push(rstat.url);
 
 
     if(message.content === prefix + "Ticketclose"){
-	    if(message.member.roles.some(r=>["🔥 Shey 🔥"].includes(r.name)) ) {
-		
+	    if(message.member.roles.some(r=>["🐼Config Discord🐼"].includes(r.name)) ) {
 
-            if(message.channel.name.startsWith(`ticket-`)){
+
+            if(message.channel.name.startsWith(`『📩』ticket-`)){
                 delTicketChannel(message)
             }else{}
             
 
 
 	    } else{
-		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🔥 Shey 🔥`).then(msg => {
+		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
     msg.delete(5000)
   })
 	    }
@@ -370,9 +370,11 @@ server.queue.push(rstat.url);
 
                 function makeChannel(message){
                 var server = message.guild;
-                var name = "ticket-" + message.author.username;
+                var name = "『📩』ticket-" + message.author.username;
 		var category = message.guild.channels.get("706873489402888192");
             var idx;
+
+            
                 //server.createChannel(name, "text");
                 var chan =  server.createChannel(name, {
 		
@@ -388,28 +390,20 @@ server.queue.push(rstat.url);
                         allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
                     },]
                 })
-                        .then(chan => {
-                chan.send(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
-            //idx = chan.channel.id
+            .then(chan => {
+             var embed = new Discord.RichEmbed()
+            .setTitle("Bonjour")
+            .setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
+            .setColor("0xFFBF00")
+            .setFooter("")
+                chan.sendEmbed(embed);
+            idx = chan.channel.id
             })
             	.catch(console.error);
                 
             
-              // var embed = new Discord.RichEmbed()
-            //.setTitle("Bonjour")
-            //.setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
-            //.setColor("0xFFBF00")
-            //.setFooter("")
-            
 
-           client.ticketReg [message.author.username] = {
-                TicketID: "test ok..."
-            }
-            fs.writeFile ("./ticketRegister.json", JSON.stringify(client.ticketReg), (err) => {
-    if (err) console.error(err)
-  });
-                
-                message.channel.send("ok !")
+
             
             }
 
@@ -418,8 +412,8 @@ server.queue.push(rstat.url);
                 var server = message.guild;
                 var name = message.author.username;
                 
-		message.channel.send(`Suppression activer !!!`)
-		    message.channel.delete();
+        message.channel.send(`Suppression activer !!!`)
+        message.channel.delete();
             }
 });
 
