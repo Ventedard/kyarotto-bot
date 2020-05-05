@@ -2,7 +2,7 @@ const Discord = require('discord.js');
 var radio = require("./radio.json");
 
 const client = new Discord.Client();
-const fs = require("fs");
+const fs = require("fs").promises;
 client.ticketReg = require("./ticketRegister.json");
 var prefix = "c!";
 
