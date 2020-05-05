@@ -499,30 +499,23 @@ server.queue.push(rstat.url);
 
             var maMap = [];
             
- msgs.forEach(async msg => {
+        msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
             maMap.push(msg.author);
+            var checker = false;
 
+            for (var i = 0; i < maMap.length; i++) {
+                if(maMap[i] == msg.author){
+                    checker = true;
+                }
+            }
            
+            if(checker == false){
+                checkl.push(msg.author)
+                embed.addField("contribuer", `${maMap[i]}`, true)
+            }
+
         });
-                var checkl = [];
-
-                         for (var i = 0; i < maMap.length; i++) {
-                
-                    
-
-                   
-                        for (var i3 = 0; i3 < checkl.length; i3++) {
-                            if(checkl[i3] == maMap[i]){
-                                
-                            }else{
-                        checkl.push(maMap[i])
-                        embed.addField("contribuer", `${maMap[i]}`, true)
-                            }
-                        }
-
-                    }
-                
        
             embed.setColor("0xFFBF00")
             embed.setFooter("")
