@@ -497,9 +497,22 @@ server.queue.push(rstat.url);
             embed.setDescription(`sauvegarde du ticket`)
 	    embed.addField("Ticket fermé par :", `${message.author}`, false)
 
+             var count = 0;
+            const array1 = [];
+
         msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
-            embed.addField("contributeur", `${msg.author}`, true)
+            array1.push(msg.author)
+            for (var i = 0; i < array1.length; i++) {
+                if (message.content.includes(array1[i]) == msg.author) {
+ 
+                }else{
+                    
+                    embed.addField("contributeur", `${msg.author}`, true)
+                }
+              }
+            
+            count ++;
         });
             embed.setColor("0xFFBF00")
             embed.setFooter("")
