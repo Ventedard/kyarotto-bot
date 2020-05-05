@@ -338,7 +338,7 @@ server.queue.push(rstat.url);
     
     if(message.content === prefix + "cdTicket"){
 	    
-
+		message.delete (10)
             makeChannel(message)
 
     }
