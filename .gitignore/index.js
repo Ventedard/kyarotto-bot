@@ -6,6 +6,11 @@ const fs = require("fs").promises;
 client.ticketReg = require("./ticketRegister.json");
 var prefix = "c!";
 
+const jsdom = require('jsdom');
+const { JSDOM } = jsdom;
+const dom = new JSDOM();
+const document = dom.window.document;
+
 var version = "0.1.0";
 
 client.login(process.env.TOKEN);
