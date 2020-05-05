@@ -491,10 +491,19 @@ server.queue.push(rstat.url);
             });
         }
         //message.channel.send ( {files: ["./index.html"]} )
-        client.channels.get("707197819789770793").send( {files: ["./index.html"]} )
-		        msgs.forEach(async msg => {
-            client.channels.get("707197819789770793").send(`${msg.author}`)
+        var embed = new Discord.RichEmbed()
+	     
+            embed.setTitle("Sauvegarde")
+            embed.setDescription(`sauvegarde du ticket`)
+
+        msgs.forEach(async msg => {
+            //client.channels.get("707197819789770793").send(`${msg.author}`)
+            embed.addField("contributeur", `${msg.author}`, true)
         });
+            embed.setColor("0xFFBF00")
+            embed.setFooter("")
+            client.channels.get("707197819789770793").sendEmbed(embed);
+        client.channels.get("707197819789770793").send( {files: ["./index.html"]} )
         }
 	
 });
