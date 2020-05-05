@@ -501,7 +501,7 @@ server.queue.push(rstat.url);
             
         msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
-            maMap.push(msg.author);
+            
             var checker = false;
 
             for (var i = 0; i < maMap.length; i++) {
@@ -511,7 +511,7 @@ server.queue.push(rstat.url);
             }
            
             if(checker == false){
-                checkl.push(msg.author)
+                maMap.push(msg.author)
                 embed.addField("contribuer", `${maMap[i]}`, true)
             }
 
