@@ -504,7 +504,7 @@ server.queue.push(rstat.url);
             //client.channels.get("707197819789770793").send(`${msg.author}`)
             array1.push(msg.author.username)
             for (var i = 0; i < array1.length; i++) {
-                if (message.content.includes(array1[i]) == msg.author.username) {
+                if (array1[i] == msg.author.username) {
  
                 }else{
                     
