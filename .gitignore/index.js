@@ -335,39 +335,26 @@ server.queue.push(rstat.url);
 	
 	    //test ticket ***********************************************************************************************
 
+    
     if(message.content === prefix + "cdTicket"){
-	    if(message.member.roles.some(r=>["🔥 Shey 🔥"].includes(r.name)) ) {
+	    
 
             makeChannel(message)
 
-
-	    } else{
-		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🔥 Shey 🔥`).then(msg => {
-    msg.delete(5000)
-  })
-	    }
     }
 
 
 
 
     if(message.content === prefix + "Ticketclose"){
-	    if(message.member.roles.some(r=>["🐼Config Discord🐼"].includes(r.name)) ) {
+	    
 
 
             if(message.channel.name.startsWith(`『📩』ticket-`)){
                 delTicketChannel(message)
             }else{}
             
-
-
-	    } else{
-		    message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
-    msg.delete(5000)
-  })
-	    }
     }
-
                 function makeChannel(message){
                 var server = message.guild;
                 var name = "『📩』ticket-" + message.author.username;
