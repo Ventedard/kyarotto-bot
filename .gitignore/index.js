@@ -418,7 +418,7 @@ server.queue.push(rstat.url);
         message.channel.delete();
             }
 	
-	function saveTranscript(message){
+	async function saveTranscript(message){
 	
 	
 	        let messageCollection = new Discord.Collection();
