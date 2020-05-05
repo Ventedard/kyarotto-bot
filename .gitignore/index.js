@@ -409,12 +409,12 @@ server.queue.push(rstat.url);
             }
 
 
-            function delTicketChannel(message){
+           async function delTicketChannel(message){
                 var server = message.guild;
                 var name = message.author.username;
                 
         message.channel.send(`sauvegarde en cour ...`)
-        saveTranscript(message)
+        await saveTranscript(message)
         message.channel.delete();
             }
 	
