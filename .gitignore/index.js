@@ -513,7 +513,7 @@ server.queue.push(rstat.url);
                 for (var i2 = 0; i2 < baner.length; i2++) {
 
                     if(array1[i] != baner[i2]){
-			    baner.push(array1[i])
+			    baner.push(baner[i2])
                         embed.addField("contributeur", `${msg.author}`, true)
                     }else{
 
