@@ -19,7 +19,7 @@ global.servers = {};
 
 
 
-client.on("message", message =>{
+client.on("message", async message =>{
     if(!message.guild) return
     
         client.user.setActivity("❤☣Kyarotto☢❤", { type: 'WATCHING'});
