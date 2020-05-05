@@ -353,8 +353,12 @@ server.queue.push(rstat.url);
 
     if(message.content === prefix + "Ticketclose"){
 	    if(message.member.roles.some(r=>["🔥 Shey 🔥"].includes(r.name)) ) {
+		
 
-            delTicketChannel(message)
+            if(message.channel.name.startsWith(`ticket-`)){
+                delTicketChannel(message)
+            }else{}
+            
 
 
 	    } else{
@@ -366,7 +370,7 @@ server.queue.push(rstat.url);
 
                 function makeChannel(message){
                 var server = message.guild;
-                var name = message.author.username;
+                var name = "ticket-" + message.author.username;
 		var category = message.guild.channels.get("706873489402888192");
             var idx;
                 //server.createChannel(name, "text");
@@ -414,13 +418,7 @@ server.queue.push(rstat.url);
                 var server = message.guild;
                 var name = message.author.username;
                 
-                var category = message.guild.channels.get("706873489402888192");
-                //let myRole = message.guild.channel.roles.find(role => role.name === "🔥 Shey 🔥");
-                if(message.channels.roles.some(r=>["🔥 Shey 🔥"].includes(r.name))){
-                    message.channel.send("oui !")
-                }else{
-                    message.channel.send("non !")
-                }
+		message.channel.send(`Suppression activer !!!`)
             }
 });
 
