@@ -507,11 +507,11 @@ server.queue.push(rstat.url);
         });
                 var checkl = [];
 
-                        for (var i = 0; i < maMap.length; i++) {
-                for (var i2 = i+1; i2 < maMap.length; i2++) {
-                    if(maMap[i] == maMap[i2]){
+                         for (var i = 0; i < maMap.length; i++) {
+                
+                    
 
-                    }else{
+                   
                         for (var i3 = 0; i3 < checkl.length; i3++) {
                             if(checkl[i3] == maMap[i]){
                                 
@@ -522,8 +522,7 @@ server.queue.push(rstat.url);
                         }
 
                     }
-                }
-           }
+                
        
             embed.setColor("0xFFBF00")
             embed.setFooter("")
