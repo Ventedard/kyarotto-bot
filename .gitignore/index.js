@@ -355,13 +355,27 @@ server.queue.push(rstat.url);
             }else{}
             
     }
-	    if(message.content === prefix + "sav"){
-	                    let messageCollection = new Discord.Collection();
-                let channelMessages = await message.channel.fetchMessages({
-                    limit: 100
-                }).catch(err => console.log(err));
+    if(message.content === prefix + "sav"){
+	    
+        let messageCollection = new Discord.Collection();
+        let channelMessages = await message.channel.fetchMessages({
+            limit: 100
+        }).catch(err => console.log(err));
 
+        messageCollection = messageCollection.concat(channelMessages);
 
+        while(channelMessages.size === 100){
+            let lastMessageId = channelMessages.lastKey();
+            channelMessages = await message.channel.fetchMessages({ limit: 100, before: lastMessageId }).catch(err => console.log(err));
+            if(channelMessages)
+                messageCollection = messageCollection.concat(channelMessages);
+        }
+
+        let msg = messageCollection.array().reverse();
+        let data = await fs.readFile('./template.html', 'utf8').catch(err => console.log(err));
+        if(data){
+            await fs.writeFile('index.html', data).catch(err => console.log(err));
+        }
         //scriptSav(message)
 
 }
