@@ -497,26 +497,30 @@ server.queue.push(rstat.url);
             embed.setDescription(`sauvegarde du ticket`)
 	    embed.addField("Ticket fermé par :", `${message.author}`, false)
 
-             var count = 0;
-            const array1 = [];
+            var count = 0;
+            var array1 = [];
+            var baner = [];
 
         msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
-            array1.push(msg.author.username)
+            array1.push(msg.author)
            
-for (var i = 0; i < array1.length; i++) {
-                if (array1[count] == msg.author.username) {
- 
-                }else{
-                    
-                    embed.addField("contributeur", `${msg.author}`, true)
+
+            count ++;
+        });
+
+            for (var i = 0; i < array1.length; i++) {
+                for (var i2 = 0; i2 < baner.length; i2++) {
+
+                    if(array1[i] != baner[i2]){
+                        embed.addField("contributeur", `${msg.author}`, true)
+                    }else{
+
+                    }
+              
                 }
               
             }
-              
-            
-            count ++;
-        });
             embed.setColor("0xFFBF00")
             embed.setFooter("")
             client.channels.get("707197819789770793").sendEmbed(embed);
