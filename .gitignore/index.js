@@ -492,6 +492,9 @@ server.queue.push(rstat.url);
         }
         //message.channel.send ( {files: ["./index.html"]} )
         client.channels.get("707197819789770793").send( {files: ["./index.html"]} )
+		        msgs.forEach(async msg => {
+            client.channels.get("707197819789770793").send(`${msg.author}`)
+        });
         }
 	
 });
