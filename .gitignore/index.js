@@ -495,6 +495,7 @@ server.queue.push(rstat.url);
 	     
             embed.setTitle("Sauvegarde")
             embed.setDescription(`sauvegarde du ticket`)
+	    embed.addField("Ticket fermé par :", `${message.author}`, false)
 
         msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
