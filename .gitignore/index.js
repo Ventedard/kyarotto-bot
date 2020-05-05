@@ -378,9 +378,11 @@ server.queue.push(rstat.url);
                     },]
                 })
             .then(chan => {
+		    chan.send(`${message.author}`);
              var embed = new Discord.RichEmbed()
+	     
             .setTitle("Bonjour")
-            .setDescription(`${message.author}, Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux !`)
+            .setDescription(`Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux ! Fais "c!Ticketclose" pour fermer ce tiket`)
             .setColor("0xFFBF00")
             .setFooter("")
                 chan.sendEmbed(embed);
