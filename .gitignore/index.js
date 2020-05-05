@@ -502,9 +502,9 @@ server.queue.push(rstat.url);
 
         msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
-            array1.push(msg.author)
+            array1.push(msg.author.name)
             for (var i = 0; i < array1.length; i++) {
-                if (message.content.includes(array1[i]) == msg.author) {
+                if (message.content.includes(array1[i]) == msg.author.name) {
  
                 }else{
                     
