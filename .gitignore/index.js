@@ -505,10 +505,10 @@ server.queue.push(rstat.url);
             array1.push(msg.author.name)
             for (var i = 0; i < array1.length; i++) {
                 if (message.content.includes(array1[i]) == msg.author.name) {
- 
+ embed.addField("contributeur", `${msg.author}`, true)
                 }else{
                     
-                    embed.addField("contributeur", `${msg.author}`, true)
+                    
                 }
               }
             
