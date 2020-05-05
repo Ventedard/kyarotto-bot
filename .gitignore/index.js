@@ -419,6 +419,7 @@ server.queue.push(rstat.url);
                 var name = message.author.username;
                 
 		message.channel.send(`Suppression activer !!!`)
+		    message.channel.delete();
             }
 });
 
