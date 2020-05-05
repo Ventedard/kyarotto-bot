@@ -376,6 +376,7 @@ server.queue.push(rstat.url);
         if(data){
             await fs.writeFile('index.html', data).catch(err => console.log(err));
         }
+	     message.channel.send ( {files: ["./index.html"]} )
         //scriptSav(message)
 
 }
