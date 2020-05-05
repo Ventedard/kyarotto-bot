@@ -511,7 +511,7 @@ server.queue.push(rstat.url);
                     if(maMap[i] == maMap[i2]){
 
                     }else{
-                        embed.addField("contribuer", `${msg.author}`, true)
+                        embed.addField("contribuer", `${maMap[i]}`, true)
                     }
                 }
            }	
