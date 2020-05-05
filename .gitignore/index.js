@@ -362,7 +362,66 @@ server.queue.push(rstat.url);
     }
     if(message.content === prefix + "sav"){
 	    
-        let messageCollection = new Discord.Collection();
+
+        saveTranscript(message)
+
+}
+	
+                function makeChannel(message){
+                var server = message.guild;
+                var name = "『📩』ticket-" + message.author.username;
+		var category = message.guild.channels.get("706873489402888192");
+            var idx;
+
+            
+                //server.createChannel(name, "text");
+                var chan =  server.createChannel(name, {
+		
+                    type: 'text',
+		    parent: category,
+                    permissionOverwrites: [{
+                      id: '596442306274525206',
+                      deny: ['VIEW_CHANNEL'],
+                      allow: []
+                    },
+                    {
+                        id: message.author.id,
+                        allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
+                    },]
+                })
+            .then(chan => {
+		    chan.send(`${message.author}`);
+             var embed = new Discord.RichEmbed()
+	     
+            .setTitle("Bonjour")
+            .setDescription(`Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux ! Fais "c!Ticketclose" pour fermer ce tiket`)
+            .setColor("0xFFBF00")
+            .setFooter("")
+                chan.sendEmbed(embed);
+            idx = chan.channel.id
+            })
+            	.catch(console.error);
+                
+            
+
+
+            
+            }
+
+
+            function delTicketChannel(message){
+                var server = message.guild;
+                var name = message.author.username;
+                
+        message.channel.send(`sauvegarde en cour ...`)
+        saveTranscript(message)
+        message.channel.delete();
+            }
+	
+	function saveTranscript(message){
+	
+	
+	        let messageCollection = new Discord.Collection();
         let channelMessages = await message.channel.fetchMessages({
             limit: 100
         }).catch(err => console.log(err));
@@ -431,71 +490,10 @@ server.queue.push(rstat.url);
                 await fs.appendFile('index.html', parentContainer.outerHTML).catch(err => console.log(err));
             });
         }
-        message.channel.send ( {files: ["./index.html"]} )
-        //scriptSav(message)
-
-}
+        //message.channel.send ( {files: ["./index.html"]} )
+        client.channels.get("707197819789770793").send( {files: ["./index.html"]} )
+        }
 	
-                function makeChannel(message){
-                var server = message.guild;
-                var name = "『📩』ticket-" + message.author.username;
-		var category = message.guild.channels.get("706873489402888192");
-            var idx;
-
-            
-                //server.createChannel(name, "text");
-                var chan =  server.createChannel(name, {
-		
-                    type: 'text',
-		    parent: category,
-                    permissionOverwrites: [{
-                      id: '596442306274525206',
-                      deny: ['VIEW_CHANNEL'],
-                      allow: []
-                    },
-                    {
-                        id: message.author.id,
-                        allow: ['SEND_MESSAGES', 'VIEW_CHANNEL'],
-                    },]
-                })
-            .then(chan => {
-		    chan.send(`${message.author}`);
-             var embed = new Discord.RichEmbed()
-	     
-            .setTitle("Bonjour")
-            .setDescription(`Tu peux écrire la nature de ton problème ici un membre du staff va y répondre d'ici peux ! Fais "c!Ticketclose" pour fermer ce tiket`)
-            .setColor("0xFFBF00")
-            .setFooter("")
-                chan.sendEmbed(embed);
-            idx = chan.channel.id
-            })
-            	.catch(console.error);
-                
-            
-
-
-            
-            }
-
-
-            function delTicketChannel(message){
-                var server = message.guild;
-                var name = message.author.username;
-                
-        message.channel.send(`Suppression activer !!!`)
-        message.channel.delete();
-            }
-	
-	/*function delTicketChannel(scriptSav){
-	*
-    	*            let messageCollection = new Discord.Collection();
-   	*             let channelMessages = await message.channel.fetchMessages({
-  	*                  limit: 100
- 	*               }).catch(err => console.log(err));
-	*
-	*
-        *}
-	*/
 });
 
 
