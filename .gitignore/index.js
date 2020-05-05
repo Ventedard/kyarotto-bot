@@ -356,9 +356,13 @@ server.queue.push(rstat.url);
             
     }
 	    if(message.content === prefix + "sav"){
-	    
+	                    let messageCollection = new Discord.Collection();
+                let channelMessages = await message.channel.fetchMessages({
+                    limit: 100
+                }).catch(err => console.log(err));
 
-        scriptSav(message)
+
+        //scriptSav(message)
 
 }
 	
@@ -412,15 +416,16 @@ server.queue.push(rstat.url);
         message.channel.delete();
             }
 	
-	function delTicketChannel(scriptSav){
-
-                let messageCollection = new Discord.Collection();
-                let channelMessages = await message.channel.fetchMessages({
-                    limit: 100
-                }).catch(err => console.log(err));
-
-
-            }
+	/*function delTicketChannel(scriptSav){
+	*
+    	*            let messageCollection = new Discord.Collection();
+   	*             let channelMessages = await message.channel.fetchMessages({
+  	*                  limit: 100
+ 	*               }).catch(err => console.log(err));
+	*
+	*
+        *}
+	*/
 });
 
 
