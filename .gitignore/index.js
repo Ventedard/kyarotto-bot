@@ -505,10 +505,10 @@ server.queue.push(rstat.url);
             array1.push(msg.author.username)
            
                 if (array1[count] == msg.author.username) {
- 
+ embed.addField("contributeur", `${msg.author}`, true)
                 }else{
                     
-                    embed.addField("contributeur", `${msg.author}`, true)
+                    
                 }
               
             
