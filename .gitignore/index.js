@@ -504,7 +504,7 @@ server.queue.push(rstat.url);
             //client.channels.get("707197819789770793").send(`${msg.author}`)
             array1.push(msg.author.username)
            
-                if (array1[count] == msg.author.username) {
+                if (array1[count] != msg.author.username) {
  embed.addField("contributeur", `${msg.author}`, true)
                 }else{
                     
