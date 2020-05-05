@@ -401,7 +401,9 @@ server.queue.push(rstat.url);
            client.ticketReg [message.author.username] = {
                 TicketID: "test ok..."
             }
-            fs.writeFile ("./ticketRegister.json", JSON.stringify(client.ticketReg));
+            fs.writeFile ("./ticketRegister.json", JSON.stringify(client.ticketReg), (err) => {
+    if (err) console.error(err)
+  });
                 
                 message.channel.send("ok !")
             
