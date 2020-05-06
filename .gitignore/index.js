@@ -15,8 +15,8 @@ var version = "0.1.0";
 
 client.login(process.env.TOKEN);
 
-const uneCommande = 'c!msg '
-const uneCommande2 = 'c!radio '
+const CMDmsg = 'c!msg '
+const CMDmsg2 = 'c!radio '
 var vlastmsg = "";
 var lastname = "";
 var inChannel = false;
@@ -144,12 +144,12 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
     }
 }
     
-  if (message.content.startsWith(uneCommande)) {
+  if (message.content.startsWith(CMDmsg)) {
 
     vlastmsg = message.author.toString()
       
       message.delete (100)
-    const str = message.content.substring(uneCommande.length)
+    const str = message.content.substring(CMDmsg.length)
     //message.channel.sendMessage(str)
         var embed = new Discord.RichEmbed()
             .setTitle("Message anonyme")
@@ -228,10 +228,10 @@ message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette
    }
     
     
-      if (message.content.startsWith(uneCommande2)) {
+      if (message.content.startsWith(CMDmsg2)) {
       
      // message.delete (1000)
-    var str = message.content.substring(uneCommande2.length)
+    var str = message.content.substring(CMDmsg2.length)
     	            try {
 			    
 		var rstat = radio[str]
@@ -417,7 +417,9 @@ server.queue.push(rstat.url);
         await saveTranscript(message)
         message.channel.delete();
             }
-	
+    
+            
+
 	async function saveTranscript(message){
         
         var ChannelNames = message.channel.name;
