@@ -422,11 +422,14 @@ server.queue.push(rstat.url);
         
         var ChannelNames = message.channel.name;
         var authorNameId;
+        var messageNumberCount;
 
 	        let messageCollection = new Discord.Collection();
         let channelMessages = await message.channel.fetchMessages({
             limit: 100
         }).catch(err => console.log(err));
+
+        messageNumberCount = channelMessages.size;
 
         messageCollection = messageCollection.concat(channelMessages);
 
@@ -490,7 +493,7 @@ server.queue.push(rstat.url);
                     messageContainer.appendChild(msgNode);
                     if(count == 0){
                         authorNameId = msg.content
-			    count ++;
+                        count ++;
                     }
                 }
 
@@ -508,6 +511,7 @@ server.queue.push(rstat.url);
             embed.addField("Ticket fermé par ", `${message.author}`, true)
             embed.addField("Nom du Ticket ", `${ChannelNames}`, true)
             embed.addField("Ticket créer par ", `${authorNameId}`, true)
+            embed.addField("Nombre de message ", `${messageNumberCount}`, true)
 
             var maMap = [];
             var tcxt = "";
