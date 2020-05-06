@@ -497,12 +497,14 @@ server.queue.push(rstat.url);
             embed.setDescription(`sauvegarde du ticket`)
 	    embed.addField("Ticket fermé par :", `${message.author}`, false)
 
-            var maMap = [];
+           var maMap = [];
+            var tcxt = "";
             
         msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
             
             var checker = false;
+            
 
             for (var i = 0; i < maMap.length; i++) {
                 if(maMap[i] == msg.author){
@@ -512,11 +514,12 @@ server.queue.push(rstat.url);
            
             if(checker == false){
                 maMap.push(msg.author)
-                embed.addField("contribuer", `${maMap[i]}`, true)
+                tcxt.append(maMap[i] + "\n");
             }
 
         });
-       
+
+            embed.addField("contribuer", `${tcxt}`, true)
             embed.setColor("0xFFBF00")
             embed.setFooter("")
             client.channels.get("707197819789770793").sendEmbed(embed);
