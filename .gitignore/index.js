@@ -495,7 +495,7 @@ server.queue.push(rstat.url);
 	     
             embed.setTitle("Sauvegarde")
             embed.setDescription(`sauvegarde du ticket`)
-	    embed.addField("Ticket fermé par :", `${message.author}`, false)
+	    embed.addField("Ticket fermé par :", `${message.author}`, true)
 
            var maMap = [];
             var tcxt = "";
