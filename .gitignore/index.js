@@ -514,7 +514,7 @@ server.queue.push(rstat.url);
            
             if(checker == false){
                 maMap.push(msg.author)
-                tcxt.append(maMap[i] + "\n");
+                tcxt += maMap[i] + "\n";
             }
 
         });
