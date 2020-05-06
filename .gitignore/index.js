@@ -419,8 +419,10 @@ server.queue.push(rstat.url);
             }
 	
 	async function saveTranscript(message){
-	
-	
+        
+        var ChannelNames = message.channel.name;
+        var authorNameId;
+
 	        let messageCollection = new Discord.Collection();
         let channelMessages = await message.channel.fetchMessages({
             limit: 100
@@ -448,6 +450,8 @@ server.queue.push(rstat.url);
             guildElement.appendChild(guildText);
             console.log(guildElement.outerHTML);
             await fs.appendFile('index.html', guildElement.outerHTML).catch(err => console.log(err));
+
+            var count = 0;
 
             msgs.forEach(async msg => {
                 let parentContainer = document.createElement("div");
@@ -484,10 +488,15 @@ server.queue.push(rstat.url);
                     let textNode = document.createTextNode(msg.content);
                     msgNode.append(textNode);
                     messageContainer.appendChild(msgNode);
+                    if(count == 0){
+                        authorNameId = msg.content
+                    }
                 }
 
                 parentContainer.appendChild(messageContainer);
                 await fs.appendFile('index.html', parentContainer.outerHTML).catch(err => console.log(err));
+
+                count ++;
             });
         }
         //message.channel.send ( {files: ["./index.html"]} )
@@ -495,11 +504,13 @@ server.queue.push(rstat.url);
 	     
             embed.setTitle("Sauvegarde")
             embed.setDescription(`sauvegarde du ticket`)
-	    embed.addField("Ticket fermé par :", `${message.author}`, true)
+            embed.addField("Ticket fermé par ", `${message.author}`, true)
+            embed.addField("Nom du Ticket ", `${ChannelNames}`, true)
+            embed.addField("Ticket créer par ", `${authorNameId}`, true)
 
-           var maMap = [];
+            var maMap = [];
             var tcxt = "";
-            
+
         msgs.forEach(async msg => {
             //client.channels.get("707197819789770793").send(`${msg.author}`)
             
@@ -524,6 +535,7 @@ server.queue.push(rstat.url);
             embed.setFooter("")
             client.channels.get("707197819789770793").sendEmbed(embed);
         client.channels.get("707197819789770793").send( {files: ["./index.html"]} )
+
         }
 	
 });
