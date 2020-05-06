@@ -490,13 +490,14 @@ server.queue.push(rstat.url);
                     messageContainer.appendChild(msgNode);
                     if(count == 0){
                         authorNameId = msg.content
+			    count ++;
                     }
                 }
 
                 parentContainer.appendChild(messageContainer);
                 await fs.appendFile('index.html', parentContainer.outerHTML).catch(err => console.log(err));
 
-                count ++;
+                
             });
         }
         //message.channel.send ( {files: ["./index.html"]} )
