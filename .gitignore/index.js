@@ -230,8 +230,10 @@ message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette
        message.delete (1000)
 	   if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
 			   
-            message.channel.send(`redémarrage du bot en cour ...`);
- 		process.exit(1);
+            message.channel.send(`redémarrage du bot en cour ...`).then( () => {
+		    process.exit(1);
+	    });
+ 		
   
 	   } else{
 message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
