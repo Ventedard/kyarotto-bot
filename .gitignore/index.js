@@ -231,7 +231,8 @@ message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette
 	   if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
 			   
             message.channel.send(`redémarrage du bot en cour ...`).then( () => {
-		    process.exit(1);
+		   	client.destroy()
+			client.login(process.env.TOKEN);
 	    });
  		
   
