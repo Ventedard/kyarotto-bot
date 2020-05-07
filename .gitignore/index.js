@@ -226,6 +226,21 @@ message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette
 	   }
 	   
    }
+	   if(message.content === prefix + "reboot"){
+       message.delete (1000)
+	   if(message.member.roles.some(r=>["🐼Staff 🐼", "🐼Config Discord🐼", "🔥 Shey 🔥", "🐲 Yhey 🐲"].includes(r.name)) ) {
+			   
+            message.channel.send(`redémarrage du bot en cour ...`);
+ 		process.exit(1);
+  
+	   } else{
+message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
+    msg.delete(5000)
+  })
+  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
+	   }
+	   
+   }
     
     
       if (message.content.startsWith(CMDmsg2)) {
