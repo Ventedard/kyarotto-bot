@@ -568,24 +568,22 @@ server.queue.push(rstat.url);
         if (message.content.startsWith(CMDPlay)) {
       
             // message.delete (1000)
-           var str = message.content.substring(CMDPlay.length)
+           var url = message.content.substring(CMDPlay.length)
 
-           if(!message.member.voiceChannel)
-           return message.channel.send("Connectez vous à un salon vocal!");
-          if(message.guild.me.voiceChannel)
-           return message.channel.send("Le bot est déjà connecter à un salon!");
-          if(!str)
-           return message.channel.send('Merci de préciser votre URL');
-      
-          const validate = await ytdl.validateURL(str.toString);
-          if (!validate) return message.channel.send(`Désolé, l'URL n'est pas valide!`);
-      
-          const info = await ytdl.getInfo(str);
-          const connection = await message.member.voiceChannel.join();
-          const dispatcher = await connection.playStream(
-              ytdl(str, { filter: 'audioonly'})
-          );
-          message.channel.send(`Musique ajoutée : ${info.title}`);
+           message.member.voiceChannel.join()
+           .then(connection => {
+               console.log('joined channel');
+           
+               connection.playStream(ytdl(url))
+               // When no packets left to send, leave the channel.
+               .on('end', () => {
+                   console.log('left channel');
+                   connection.channel.leave();
+               })
+               // Handle error without crashing the app.
+               .catch(console.error);
+           })
+           .catch(console.error);
 
         }
 	
