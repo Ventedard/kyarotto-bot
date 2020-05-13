@@ -574,16 +574,16 @@ server.queue.push(rstat.url);
            return message.channel.send("Connectez vous à un salon vocal!");
           if(message.guild.me.voiceChannel)
            return message.channel.send("Le bot est déjà connecter à un salon!");
-          if(!str[0])
+          if(!str)
            return message.channel.send('Merci de préciser votre URL');
       
-          const validate = await ytdl.validateURL(str[0]);
+          const validate = await ytdl.validateURL(str);
           if (!validate) return message.channel.send("Désolé, l'URL n'est pas valide!");
       
-          const info = await ytdl.getInfo(str[0]);
+          const info = await ytdl.getInfo(str);
           const connection = await message.member.voiceChannel.join();
           const dispatcher = await connection.playStream(
-              ytdl(str[0], { filter: 'audioonly'})
+              ytdl(str, { filter: 'audioonly'})
           );
           message.channel.send(`Musique ajoutée : ${info.title}`);
 
