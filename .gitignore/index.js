@@ -577,8 +577,8 @@ server.queue.push(rstat.url);
           if(!str)
            return message.channel.send('Merci de préciser votre URL');
       
-         // const validate = await ytdl.validateURL(str);
-         // if (!validate) return message.channel.send(`Désolé, l'URL n'est pas valide!`);
+          const validate = await ytdl.validateURL(str.toString);
+          if (!validate) return message.channel.send(`Désolé, l'URL n'est pas valide!`);
       
           const info = await ytdl.getInfo(str);
           const connection = await message.member.voiceChannel.join();
