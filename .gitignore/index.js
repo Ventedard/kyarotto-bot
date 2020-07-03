@@ -123,7 +123,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         if(inChannel == true){
 		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
 	}else{
-        number = 65;
+        number = 77;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
         
         try {
