@@ -125,7 +125,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 	}else{
         number = 77;
         imageNumber = Math.floor (Math.random() * (number - 1 + 1)) + 1;
-        message.channel.send(`numéro de l'image : ${imageNumber}`);
+        //message.channel.send(`numéro de l'image : ${imageNumber}`);
         try {
             
             message.channel.send ( {files: ["./meme/" + imageNumber + ".jpg"]} )
