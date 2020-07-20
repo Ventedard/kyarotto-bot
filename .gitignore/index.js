@@ -171,19 +171,19 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
             message.channel.send("Désolé mais je n'ai trouvé personne !😥").then(msg => {
     msg.delete(5000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 
+  .catch(/*message d'erreur*/); 
         } else{
            message.channel.send("La dèrnière personne à avoir utilise msg est : " + vlastmsg).then(msg => {
     msg.delete(5000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 
+  .catch(/*message d'erreur*/); 
         }
   
     } else {
   message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
     msg.delete(5000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
+  .catch(/*-----*/);
     }
         
     }
@@ -219,12 +219,12 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
         message.channel.sendEmbed(embed).then(msg => {
     msg.delete(5000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/); 	   
+  .catch(/*---------*/); 	   
 	   } else{
 message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
     msg.delete(5000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
+  .catch(/*---------*/);
 	   }
 	   
    }
@@ -242,7 +242,7 @@ message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette
 message.channel.send(`Désolé mais, tu n'as pas la permission d'effectuer cette commande, il faut être minimum 🐼Config Discord🐼`).then(msg => {
     msg.delete(5000)
   })
-  .catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
+  .catch(/*---------*/);
 	   }
 	   
    }
@@ -299,7 +299,7 @@ server.queue.push(rstat.url);
 	       // message.channel.send(rstat.url).then(msg => {
    // msg.delete(5000)
  // })
-  //.catch(/*Your Error handling if the Message isn't returned, sent, etc.*/);
+  //.catch(/*---------------*/);
          
   }
 	function Play(connection, message)
@@ -575,12 +575,12 @@ server.queue.push(rstat.url);
                console.log('joined channel');
            
                connection.playStream(ytdl(url))
-               // When no packets left to send, leave the channel.
+               // arrêt envoi de paquets et quitte le salon
                .on('end', () => {
                    console.log('left channel');
                    connection.channel.leave();
                })
-               // Handle error without crashing the app.
+               // erreur
                .catch(console.error);
            })
            .catch(console.error);
