@@ -29,7 +29,7 @@ global.servers = {};
 client.on("message", async message =>{
     if(!message.guild) return
     
-        client.user.setActivity("❤☣Carrot☢❤", { type: 'WATCHING'});
+        client.user.setActivity("Carrot", { type: 'WATCHING'});
         client.user.setStatus('online')
 
     
