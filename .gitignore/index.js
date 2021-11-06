@@ -5,7 +5,7 @@ const client = new Discord.Client();
 const fs = require("fs").promises;
 client.ticketReg = require("./ticketRegister.json");
 var prefix = "c!";
-const ytdl = require('ytdl-core');
+//const ytdl = require('ytdl-core');
 
 const jsdom = require('jsdom');
 const { JSDOM } = jsdom;
@@ -574,7 +574,8 @@ server.queue.push(rstat.url);
         }
 
         if (message.content.startsWith(CMDPlay)) {
-      
+     
+		/*
             // message.delete (1000)
            var url = message.content.substring(CMDPlay.length)
 
@@ -593,7 +594,7 @@ server.queue.push(rstat.url);
            })
            .catch(console.error);
 
-        }
+        }*/
 	
 });
 
