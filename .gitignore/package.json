@@ -11,10 +11,6 @@
   "dependencies": {
     "node-fetch": "2.6.0",
     "discord.js": "^12.0.2",
-    "opusscript": "0.0.7",
     "jsdom": "^16.2.2",
-    "ffmpeg-static": "^4.0.1",
-    "soundcloudr": "^1.1.0",
-    "spotify-web": "git+https://github.com/mattyway/node-spotify-web.git"
   }
 }
