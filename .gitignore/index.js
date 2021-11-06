@@ -82,6 +82,7 @@ message.channel.send(`${message.author} Mmm, les Carottes 🥕`)
 			let role = message.guild.roles.cache.find(r => r.id === "692709226878861382");
 			message.author.roles.add(role);
 		}
+		console.log("ok")
 		message.delete(10)
 	}
 	if(message.content === prefix + "oh"){
